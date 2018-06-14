@@ -1,0 +1,28 @@
+{% extends "portfolio/base.html" %}
+{% load markdownify %}
+
+{% block content%}
+
+
+<div class="blog">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'blog:blog' %}">My Blog</a></li>
+    <li class="breadcrumb-item active">{{ post.title }}</li>
+</ol>
+<div class="container">
+  <div>
+  <div class="blog-post">
+    <h2>{{ post.title }}</h2>
+    <h6 style="float:right">Category: {{ post.category }}</h6>
+    <h6>{{ post.published_date|date:"M d, Y" }}</h6>
+    <div class="container">
+      <hr>
+
+      <div>{{ post.text|markdown|safe }}</div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+{% endblock %}
+

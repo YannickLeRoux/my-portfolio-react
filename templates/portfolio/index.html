@@ -1,0 +1,25 @@
+{% extends "portfolio/base.html" %}
+{%load static %}
+{% block title %}Yannick Le Roux - Home{% endblock title %}
+
+		{% block content %}
+   <div class="jumbotron hero-technology">
+        <div class="container home-title-container">
+				<h1 class="homepage-title"><i class="fa fa-quote-left"></i> Any fool can write code that a computer can understand. </br>Good programmers write code that humans can understand.<i class="fa fa-quote-right"></i>
+				</br><small>― Martin Fowler </small></h1>
+		</div>
+				<p><a class="btn btn-primary btn-lg hero-button anim-button" role="button" href="{% url 'portfolio:about' %}">Learn about me</a></p>
+    </div>
+    <div class="container mb-5">
+			<div class="text-center">
+				<p><em>Portfolio Website made with Love, Python & Javascript</em></p>
+			</div>
+			<div class="text-center">
+        <i class="fa fa-laptop fa-5x mb-3" id="laptop-index"></i>
+			</div>
+        <p class="text-center">Hi! I am Yannick Le Roux, <strong>Software</strong> and <strong>Web</strong> developper <em>in the making</em>.</p>
+        <p class="text-center">I used <strong>Python</strong> to build the back-end of this project, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong> and <strong>Bootstrap</strong> for the Front End. </p>
+				<p>I like to make any kind of applications that could make your life easier or, very humbly, make the world a better place. :)</p>
+    </div>
+{% endblock content %}
+

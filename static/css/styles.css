@@ -1,0 +1,285 @@
+:root {
+	--themeblue: #218CB6;
+}
+.homepage-title {
+  font-size:3.375em;
+  font-family:Dosis, sans-serif;
+  color:#FFFFFF;
+}
+
+.container.home-title-container {
+  margin-top:50px;
+	padding: 10px;
+  margin-bottom:40px;
+  background-size:auto;
+  background-position:left;
+  background-color:rgba(0,0,0,0.2);
+}
+
+p {
+  font-family:'Open Sans', sans-serif;
+  font-weight:500;
+  font-size:18px;
+  color:rgb(125,130,133);
+}
+
+h2 {
+  font-family:'Muli', sans-serif;
+  font-size:2.25em;
+  color:#2C363F;
+}
+
+.paragraph {
+  text-align:center;
+  padding:10px 100px;
+  margin:10px 16px;
+}
+
+section-blockquote {
+	box-shadow:0 2px 5px rgba(0,0,0,0.2);
+	background:#fff;
+	width:60%;
+	margin:100px auto;
+	padding:50px;
+}
+blockquote {
+	text-align:center;
+	font-size:20px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	position:relative;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:after {
+	color:#ccc;
+	font-family:Source Sans Pro;
+	content: open-quote;
+	font-size:80px;
+	position:absolute;
+	left:50%;
+	bottom:calc(100% - 20px);
+	background:#fff;
+	height:55px;
+	width: 55px;
+	line-height:normal;
+	text-align:center;
+	transform:translateX(-50%);
+}
+blockquote p {
+	padding:20px;
+}
+
+.home-title-container {
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 1.5s;
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+	}
+	80% {
+		-webkit-transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+.anim-button {
+	animation-name: expandOpen;
+	-webkit-animation-name: expandOpen;
+
+	animation-duration: 1.2s;
+	-webkit-animation-duration: 1.2s;
+
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	visibility: visible !important
+}
+@keyframes expandOpen {
+	0% {
+		transform: scale(1.8);
+	}
+	50% {
+		transform: scale(0.95);
+	}
+	80% {
+		transform: scale(1.05);
+	}
+	90% {
+		transform: scale(0.98);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes expandOpen {
+	0% {
+		-webkit-transform: scale(1.8);
+	}
+	50% {
+		-webkit-transform: scale(0.95);
+	}
+	80% {
+		-webkit-transform: scale(1.05);
+	}
+	90% {
+		-webkit-transform: scale(0.98);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+
+.blog {
+	background-color:#F2EFEA;
+	padding: 50px;
+}
+
+.blog-post {
+  padding: 20px;
+  margin: 20px 70px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.blog p {
+  color: #2C363F;
+}
+
+
+
+.clock {
+	width: 10rem;
+	height: 10rem;
+	border:10px solid #218CB6;
+	border-radius:50%;
+	margin:50px auto 30px auto;
+	position: relative;
+	padding:1rem;
+	box-shadow:
+		0 0 0 4px rgba(0,0,0,0.1),
+		inset 0 0 0 3px #EFEFEF,
+		inset 0 0 10px black,
+		0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+	width:50%;
+	height:3px;
+	background:black;
+	position: absolute;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+	transition: all .05s;
+	transition-timing-function: cubic-bezier(0.08, 2.85, 0.58, 1);
+	top:50%;
+}
+
+.fa-thumbs-up {
+	color: var(--themeblue);
+	margin: 165px auto;
+}
+/* .make-space { */
+/* 	height: 70px; */
+/* } */
+
+/* @media (min-width:1000px) { */
+/* .make-space { */
+/* 	height: 100px; */
+/* } */
+
+.fa-laptop {
+	color:#292D32;
+	transition: all 0.7s ease-in-out;
+
+}
+
+.laptop-hide {
+	transform: rotate(360deg) translate3D(100%, 150%, 0) scale(1.2) scale(0);
+
+}
+
+
+
+@media screen and (min-width:300px) {
+	.blog {
+		padding: 2px;
+	}
+	.blog-post {
+			padding: 15px;
+			margin: 20px 15px;
+	}
+	.make-space {
+		height:100px;
+	}
+
+}
+
+
+
+@media screen and (min-width:494px) {
+	.make-space {
+		height: 62px;
+	}
+
+}
+
+
+@media screen and (min-width:768px) {
+	.make-space {
+		height:100px;
+	}
+
+}
+
+@media screen and (min-width:992px) {
+	.make-space {
+		height:70px;
+	}
+
+}
+

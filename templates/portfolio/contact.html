@@ -1,0 +1,64 @@
+{% extends "portfolio/base.html" %} 
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="contact-clean">
+	<div class="container mb-5">
+	<div class="row">
+		<div class="col-md-4 col-sm-12 my-auto text-center">
+
+			
+			<p class="text-center"> Please let me know how I could help you! ✍️ </p>
+			<p>Are you looking to add a highly motivated Junior Developer to your team ? 🙋‍♂️</p>
+			<p>Do you just need a cool website? </p>
+
+				<p class="text-center mb-2">I am looking forward to hearing from you!</p>
+	  
+
+		</div>
+<div class="col-md-8 col-sm-12">
+
+<form method="post" novalidate>
+  <h2 class="text-center">Contact Form</h2>
+
+  {% csrf_token %}
+
+  {% for field in form %}
+    <div class="form-group">
+      {{ field.label_tag }}
+
+      {% if form.is_bound %}
+        {% if field.errors %}
+
+          {% render_field field class="form-control is-invalid" %}
+          {% for error in field.errors %}
+            <div class="invalid-feedback">
+              {{ error }}
+            </div>
+          {% endfor %}
+
+        {% else %}
+          {% render_field field class="form-control is-valid" %}
+        {% endif %}
+      {% else %}
+        {% render_field field class="form-control" %}
+      {% endif %}
+
+      {% if field.help_text %}
+        <small class="form-text text-muted">
+          {{ field.help_text }}
+        </small>
+      {% endif %}
+    </div>
+  {% endfor %}
+  <div class="form-group"><button class="btn btn-primary btn-lg hero-button"
+      type="submit"> Send </button></div>
+</form>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
+
+

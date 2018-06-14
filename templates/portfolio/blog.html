@@ -1,0 +1,38 @@
+{% extends "portfolio/base.html" %}
+{% load markdownify %}
+
+{% block content%}
+<!-- une icone carree bords arrondis avec ombre pour marquer chaque post -->
+<!-- a sa droite titre et date --> 
+<!-- reprendre couleur de fond de contact et faire des div blancs pour chaque post -->
+<!-- voir a utiliser react -->
+
+<div class="blog">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">My Blog</li>
+</ol>
+<div class="container">
+  <div>
+	{% if my_posts %}
+  {% for post in my_posts %}
+  <div class="blog-post">
+    <h2><a href="{% url 'blog:post' post.slug %}">{{ post.title }}</a></h2>
+    <h6 style="float:right">Category: {{ post.category }}</h6>
+    <h6>{{ post.published_date|date:"M d, Y" }}</h6>
+    <div class="container">
+      <hr>
+
+      <div>{{ post.text|markdown|safe|truncatewords:10 }}</div>
+			<a class="text-mute text-right" href="{% url 'blog:post' post.slug %}" ><i class="fa fa-arrow-circle-right"></i> Read more...</a>
+    </div>
+  </div>
+
+  {% empty %}
+  <h2>No Articles yet.</h2>
+  </div>
+</div>
+</div>
+
+{% endfor %}
+{% endif %}
+{% endblock %}

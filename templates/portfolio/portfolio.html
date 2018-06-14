@@ -1,0 +1,113 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="portfolio">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Websites</h2>
+                <p class="text-center">Before learning to code, I used to create website using Wordpress. See some below.</p>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item">
+                  <div class="image-portfolio">
+                    <a href="http://dj-newyork.com" target="_blank"><img
+                    class="img-fluid" src="{% static "img/djnewyork.jpg" %}">
+                    <div class="overlay">
+                      <div class="text-image-portfolio">Visit →</div>
+                    </div>
+                    </a>
+                    </div>
+                    <h3 class="name">DJ-NewYork Agency</h3>
+										<p class="description">Made in 2017, this website allows the user to browse the talents of this agency and ask for their availability.</p></div>
+
+                    <div class="col-sm-6 col-md-4 item">
+                      <div class="image-portfolio">
+                      <a href="https://raquelleroux.com" target="_blank"><img
+                      class="img-fluid" src="{% static "img/raquelleroux.jpg" %}">
+                      <div class="overlay">
+                          <div class="text-image-portfolio">Visit →</div>
+                        </div>
+                        </a>
+                        </div>
+                    <h3 class="name">Raquel Le Roux Yoga</h3>
+                    <p class="description">I made this website in 2015. It includes some e-commerce solutions.</p></div>
+
+                <div class="col-sm-6 col-md-4 item">
+                  <div class="image-portfolio">
+                  <a href="https://dj-yanic.com" target="_blank"><img
+                  class="img-fluid" src="{% static "img/djyanic.jpg" %}">
+                  <div class="overlay">
+                      <div class="text-image-portfolio">Visit →</div>
+                    </div>
+                    </a>
+                    </div>
+                <h3 class="name">DJ Yanic</h3>
+                <p class="description">I created this website in 2014 to promote my DJ activity. Designed with Wordpress.</p></div>
+            </div>
+        </div>
+</div>
+
+<div class="portfolio">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Web Apps</h2>
+                <p class="text-center">Developed with Python and Bootstrap.</p>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-6 item"><div class="image-portfolio">
+
+                 <a href="https://twitterpie.herokuapp.com/" target="_blank"><img
+                    class="img-fluid" src="{% static "img/twitterpie.jpg" %}">
+                    <div class="overlay">
+                        <div class="text-image-portfolio">Visit →</div>
+                      </div>
+                      </a>
+                      </div>
+                    <h3 class="name">Twitter Pie</h3>
+										<p class="description">Flask app that takes a Twitter handle and returns a charts for the 10 most used words in the user feed.</p></div>
+                <div
+                    class="col-sm-6 col-md-6 item">
+                    <div class="image-portfolio">
+                    <a href="http://receipts-organizer.herokuapp.com/" target="_blank"><img
+                      class="img-fluid" src="{% static "img/receiptsorganizer.jpg" %}">
+                      <div class="overlay">
+                        <div class="text-image-portfolio">Visit →</div>
+                      </div>
+                      </a>
+                      </div>
+                      <h3 class="name">Receipts Organizer</h3>
+                    <p class="description">Create a user account and upload your receipts scans to keep them organized by date and category. Work in progress.</p></div>
+                   </div>
+</div>
+
+
+<div class="portfolio">
+<div class="container">
+    <div class="intro">
+
+    <h2 class="text-center">Open Source Projects</h2>
+		{% if user %}
+    <p> I currently have {{ user.public_repos }} public repositories on
+    GitHub:</p>
+		{% else %}
+		<p>Error: Can't access GitHub API</p>
+		{% endif %}
+    <ul class="mt-5">
+		{% if repos %}
+    {% for repo in repos %}
+    <li class="my-3"><a href={{ repo.html_url  }}>{{ repo.name }}</a></br>
+      {% if repo.description %}
+      <small>{{ repo.description }}</small>
+      {% endif %}
+      <hr> </li>
+    {% endfor %}
+		{% endif %}
+    </ul>
+
+		</div>
+</div>
+</div>
+{% endblock %}

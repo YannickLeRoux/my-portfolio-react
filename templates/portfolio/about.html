@@ -1,0 +1,69 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+{% block title %} Yannick Le Roux - About me {% endblock title %}
+{% block content %}
+<div class="container">
+	<div class="intro">
+   <div class="section-blockquote mt-5">
+		<blockquote>
+			<p>Teaching myself coding on a daily basis since May 2017, I enjoy solving real-life problems with what I learned.
+			</br> For example, I started automating time consuming tasks at my current job.</p>
+		</blockquote>
+	</div>
+	<p><strong>My Objective:</strong> Get a first developer job in 2018.</p>
+	</div>
+	<hr>
+</div>
+<div class="container">
+	<div class="container my-5">
+		<div class="text-center"><a href="http://yannick-dev.com/static/files/Resume-v7.pdf" target="_blank" class="btn btn-primary btn-lg hero-button anim-button mb-4" id="download" >Download my Resume</a></div>
+
+		<br/>
+		<p>After working for ten years as a sound engineer and DJ in the music industry, I felt a desire to switch career early 2017.</br>
+
+		I remember that as a kid and then a teenager, I loved to create small scripts on my Atari STE, or even hack into some games. I just didn't know at that time if I had what it would take to, one day, become a professional developer.</p>
+
+		<p>Then I discovered the impressive range and quality of online content designed to teach people, like me, how to write code.</br>
+    I asked some informed people for advice and was told to give Python a try.</p>
+
+		<p>I quickly completed a first course created by MIT, <em>Introduction to Computer Science and Python</em>, and
+		<a href="https://courses.edx.org/certificates/094c7498fb13491b95ae05ff29ab9117" target="_blank">achieved a passing grade.</a></br>
+
+		I enjoyed the course so much I became hooked on learning more about how to code.</p>
+
+
+		<div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+<h4 class="text-center mb-5"><i class="fa fa-quote-left"></i> Time to get my first developer job! <i class="fa fa-quote-right"></i></h4>
+
+
+		<p>The first personal projects I undertook were driven by the idea of making my current job easier. <a href="https://github.com/YannickLeRoux/mp3_organizer" target="_blank">Organizing the music files</a> in
+		my laptop or <a href="https://github.com/YannickLeRoux/DMC_Chart_Parser" target="_blank">reading through tons of blog articles and charts</a> to collect good tracks to play, could be very boring and repetitive. These things, I felt, could definitely be helped by coding.</br></br>
+
+		For several years, I had been building websites using WordPress, but once I knew how to code, I wanted to know how to build a website from scratch.</p>
+
+		<p>Well, it so happens that Python is good at that too! As I was already familiar with HTML and CSS, I got into <a href="https://www.udemy.com/certificate/UC-5PRSEYVI/" target="_blank">Django</a> to learn to create the back-end. </br>
+My first project was to create a <a href="http://receipts-organizer.herokuapp.com/" target="_blank">receipts organizer</a> app, one that could scan receipts and keep them organized in a database. I still have to make some improvements to it (i.e. the facility to scan with a phone, design, security, etc.,) but anybody can sign up for an account and import documents already scanned.</p>
+
+		<p>I next decided to learn JavaScript, following the <a href="https://courses.edx.org/certificates/ee19337ad1df495cb24f91648532eac3" target="_blank">University of Pennsylvania online course</a>,  as I believe it is essential for Web Development.</p>
+
+		<p>Django is amazing but it's sometimes too much boilerplate for <a href="https://twitterpie.herokuapp.com/" target="_blank">very small apps like this one</a>, so I learned how to use Flask as well.</p>
+
+		<p>These days, I continue to dive deeper into programming, extending my front-end knowledge learning <strong>React JS</strong> (web app currently in development), and deployment tools like Docker. I am also improving my ability to deploy my apps on a Linux server as I firmly believe <strong>Web apps belong to the Web !</strong>
+		</p>
+	    </div>
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+ <script src="{% static "js/clock.js" %}"></script>
+{% endblock javascript %}
+

@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23484726-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23484726-4');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Yannick Le Roux - Web & Software Development - San Diego{% endblock title %}</title>
+
+  <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700i,800,900">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli">
+  <link rel="stylesheet" href="{% static "css/Contact-Form-Clean.css" %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+  <link rel="stylesheet" href="{% static "css/Navigation-Clean.css" %}">
+  <link rel="stylesheet" href="{% static "css/Paralax-Hero-Banner.css" %}">
+  <link rel="stylesheet" href="{% static "css/Team-Boxed.css" %}">
+  <link rel="stylesheet" href="{% static "css/vim.css" %}">
+  <link rel="stylesheet" href="{% static "css/Footer-Dark.css" %}">
+  <link rel="stylesheet" href="{% static "css/Portfolio.css" %}">
+  <link rel="stylesheet" href="{% static "fonts/font-awesome.min.css" %}">
+  <link rel="shortcut icon" href="{% static "img/favicon.ico" %}"> {% block addstyle %} {% endblock addstyle %}
+  <link rel="stylesheet" href="{% static "css/styles.css" %}">
+</head>
+
+{% block body %}
+
+<body>
+  <div class="page"></div>
+  <div>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'portfolio:home' %}">Yannick Le Roux </a>
+        <span id="tagline" class="navbar-brand">
+          <i class="fa fa-laptop" style="color: white;"></i>
+          <small> Developer in the making</small>
+        </span>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="nav navbar-nav ml-auto">
+
+            {% with url_name=request.resolver_match.url_name %}
+            <li class="nav-item" role="presentation">
+              <a class="nav-link {% if url_name == 'about' %}active{% endif %}" href="{% url 'portfolio:about' %}">About me</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link {% if url_name == 'portfolio' %}active{% endif %}" href="{% url 'portfolio:portfolio' %}">Portfolio</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link {% if url_name == 'blog' %}active{% endif %}" href="{% url 'blog:blog' %}">Blog</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link {% if url_name == 'contact' %}active{% endif %}" href="{% url 'portfolio:contact' %}">Hire Me</a>
+            </li>
+
+            {% endwith %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="make-space"></div>
+  </div>
+  <div class="content">
+    {% block content %} {% endblock content %}
+
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/myscript.js" %}"></script>
+    <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    {% block javascript %} {% endblock javascript %}
+</body>
+{% endblock body %}
+</div>
+<div class="footer-dark">
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col item social">
+          <a href="https://stackoverflow.com/users/8045609/yannick?tab=profile">
+            <i class="fa fa-stack-overflow"></i>
+          </a>
+          <a href="https://twitter.com/DJ_Yanic/">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://github.com/YannickLeRoux">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/yannick-le-roux/">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <p class="copyright">Yannick Le Roux © 2018</p>
+    </div>
+  </footer>
+</div>
+
+</html>

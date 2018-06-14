@@ -1,0 +1,7 @@
+Hey, I got a message from {{ name }}
+
+Reply to: 
+{{ from_email  }}
+
+Message:
+{{ message }}
