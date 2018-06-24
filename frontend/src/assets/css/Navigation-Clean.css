@@ -1,0 +1,116 @@
+.navigation-clean {
+  background:#fff;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+  padding-top:.75rem;
+  padding-bottom:.75rem;
+  color:#333;
+  border-radius:0;
+  box-shadow: none;
+  border:none;
+  margin-bottom:0;
+  background-color:#158CB8;
+  z-index: 1234567;
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(0);
+}
+
+@media (min-width:768px) {
+  /*
+  .navigation-clean {
+    padding-top:1rem;
+    padding-bottom:1rem;
+
+  } */
+  .make-space {
+		height: 100px;
+	}
+}
+
+.navigation-clean .navbar-brand {
+  font-weight:700;
+  color:#ffffff;
+  font-family:Montserrat, sans-serif;
+}
+
+.navigation-clean .navbar-brand:hover {
+  color:#ffffff;
+}
+
+.navigation-clean .navbar-toggler {
+  border-color:#ddd;
+}
+
+.navigation-clean .navbar-toggler:hover, .navigation-clean .navbar-toggler:focus {
+  background:none;
+}
+
+.navigation-clean .navbar-toggler {
+  color:#888;
+}
+
+.navigation-clean .navbar-collapse, .navigation-clean .form-inline {
+  border-top-color:#ddd;
+  font-family:Montserrat, sans-serif;
+}
+
+/* .navigation-clean.navbar-light .navbar-nav .nav-link.active, .navigation-clean.navbar-light .navbar-nav .nav-link.active:focus, .navigation-clean.navbar-light .navbar-nav .nav-link.active:hover { */
+/*   color:#8f8f8f; */
+/*   box-shadow:none; */
+/*   background:none; */
+/*   pointer-events:none; */
+/* } */
+
+.navigation-clean.navbar .navbar-nav .nav-link {
+  font-size: 13px;
+  padding-left:18px;
+  padding-right:18px;
+  color:#ffffff;
+	transition: all 0.3s ease-in-out;
+}
+
+
+.navigation-clean.navbar-light .navbar-nav .nav-link:hover {
+		transition: all 0.2s ease-in-out;
+		transform: scale(1.2);
+
+}
+
+
+.navigation-clean .navbar-nav > li > .dropdown-menu {
+  margin-top:-5px;
+  box-shadow:none;
+  background-color:#fff;
+  border-radius:2px;
+}
+
+.navigation-clean .dropdown-menu .dropdown-item:focus, .navigation-clean .dropdown-menu .dropdown-item {
+  line-height:2;
+  color:#37434d;
+}
+
+.navigation-clean .dropdown-menu .dropdown-item:focus, .navigation-clean .dropdown-menu .dropdown-item:hover {
+  background:#eee;
+  color:inherit;
+}
+
+.active {
+	transition: border 0.3s ease-in-out;
+	border: 1px solid white;
+  background-color:transparent;
+}
+
+.hidenav {
+  transition: 1s ease-in-out;
+  transform: translateY(-100%);
+}
+
+@media (min-width:300px) {
+  #tagline {
+    display: block;
+  }
+}
+
+
+

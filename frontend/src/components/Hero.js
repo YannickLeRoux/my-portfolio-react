@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LazyHero from 'react-lazy-hero';
 import { Jumbotron, Button } from 'reactstrap';
+import '../assets/css/Paralax-Hero-Banner.css';
 
 class Hero extends Component {
     state = {
@@ -20,20 +21,19 @@ class Hero extends Component {
           <div>
             <LazyHero
             className="hero"
-            imageSrc="https://unsplash.it/2000/1000"
+            imageSrc="../img/hero-background-technology.jpg"
             color='#F2EFEA'
             minHeight='75vh'
             parallaxOffset='100'
             style={{top: this.state.offsetHeight }}
             >
-                <Jumbotron className="mx-5 my-3" style={ styles.jumboStyle }>
-                    <h1 className="display-3">Hello, world!</h1>
-                    <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <hr className="my-2" />
-                    <p>It uses utility classes for typgraphy and spacing to space content out within the larger container.</p>
-                    <p className="lead">
-                    <Button color="primary">Learn About Me</Button>
-                    </p>
+                <Jumbotron className="jumbotron hero-technology" style={ styles.jumboStyle }>
+                <div class="container home-title-container">
+                    <h1 className="homepage-title"><i class="fa fa-quote-left"></i> Any fool can write code that a computer can understand.
+Good programmers write code that humans can understand.<i class="fa fa-quote-right"></i></h1>
+                    <p style={{ color: 'white' }}> - Martin Fowler</p>
+                    </div>
+                    <Button className="btn btn-primary btn-lg hero-button anim-button" color="primary">Learn About Me</Button>
                 </Jumbotron>
               </LazyHero>
 

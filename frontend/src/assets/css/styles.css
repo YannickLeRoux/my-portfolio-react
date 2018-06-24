@@ -1,20 +1,10 @@
 :root {
-  --themeblue: #218CB6;
-  --satblue: #00A7E8;
-  --darkerblue: #066C94;
-  --footerbackground: #273136;
-  --textgrey: #273136;
-  --lightgreen: #99DDC8;
-  --washedyellow: #E7EB90;
-  --raisinblack: #23231A;
-  --softwhite: #EBF2FA;
-
+	--themeblue: #218CB6;
 }
 .homepage-title {
   font-size:3.375em;
   font-family:Dosis, sans-serif;
   color:#FFFFFF;
-  font-weight: 400;
 }
 
 .container.home-title-container {
@@ -124,12 +114,6 @@ blockquote p {
 		-webkit-transform: scale(1);
 		opacity: 1;
 	}
-}
-
-.btn-primary {
-  background-color: var(--satblue);
-  border-color: var(--themeblue);
-  border-radius: 0px;
 }
 
 
@@ -298,3 +282,4 @@ blockquote p {
 	}
 
 }
+

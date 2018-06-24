@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
+import '../assets/css/Navigation-Clean.css';
 import * as Colors from '../constants/Colors';
 
 import {
@@ -94,19 +95,19 @@ class NavBar extends Component {
   }
 }
 
-const styles = {
-  brandStyle: {
-    color: 'white'
-  },
-  navbarStyle : {
-    backgroundColor: Colors.navBlue,
-    position: 'fixed',
-    width: '100%',
-    zIndex: '1223'
-  },
-  navLinkStyle: {
-    color: 'white'
-  }
-}
+// const styles = {
+//   brandStyle: {
+//     color: 'white'
+//   },
+//   navbarStyle : {
+//     backgroundColor: Colors.navBlue,
+//     position: 'fixed',
+//     width: '100%',
+//     zIndex: '1223'
+//   },
+//   navLinkStyle: {
+//     color: 'white'
+//   }
+// }
 
 export default NavBar;

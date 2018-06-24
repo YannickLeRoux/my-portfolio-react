@@ -14,7 +14,6 @@ class App extends Component {
         <Hero />
         <HomePageContent />
         <Footer />
-
       </div>
     );
   }
