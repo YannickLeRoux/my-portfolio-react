@@ -38,6 +38,13 @@
   color:#ffffff;
 }
 
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:focus,
+ .navbar-light .navbar-brand:hover {
+   color: #fff;
+ }
+
+
 .navigation-clean .navbar-toggler {
   border-color:#ddd;
 }

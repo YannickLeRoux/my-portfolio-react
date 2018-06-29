@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 import '../assets/css/Navigation-Clean.css';
 import * as Colors from '../constants/Colors';
@@ -10,7 +11,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -34,7 +34,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-light navbar-expand-md navigation-clean">
       <div className="container">
-        <a className="navbar-brand" href="#">Yannick Le Roux </a>
+        <Link className="navbar-brand" to='/'>Yannick Le Roux </Link>
         <span id="tagline" className="navbar-brand">
           <i className="fa fa-laptop" style={{color: 'white'}}></i>
           <small> Developer in the making</small>
@@ -47,16 +47,16 @@ class NavBar extends Component {
           <ul className="nav navbar-nav ml-auto">
 
             <li className="nav-item" role="presentation">
-              <a className="nav-link active" href="#">About me</a>
+              <NavLink className="nav-link" to='/about'>About me</NavLink>
             </li>
             <li className="nav-item" role="presentation">
-              <a className="nav-link" href="#">Portfolio</a>
+              <NavLink className="nav-link" to='/portfolio'>Portfolio</NavLink>
             </li>
             <li className="nav-item" role="presentation">
-              <a className="nav-link" href="#">Blog</a>
+              <NavLink className="nav-link" to='/blog'>Blog</NavLink>
             </li>
             <li className="nav-item" role="presentation">
-              <a className="nav-link" href="#">Hire Me</a>
+              <NavLink className="nav-link" to='/contact'>Hire Me</NavLink>
             </li>
 
           </ul>

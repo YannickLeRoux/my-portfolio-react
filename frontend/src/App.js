@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
+import myScript from './assets/js/myscript';
+import herojs from './assets/js/Paralax-Hero-Banner';
 
 import NavBar from './components/NavBar';
-import Hero from './components/Hero';
-import HomePageContent from './components/HomePageContent';
+import Main from './components/Main';
 import Footer from './components/Footer';
 
 class App extends Component {
+
+  componentDidMount() {
+    myScript();
+    // code a corriger herojs();
+
+  }
+
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <Hero />
-        <HomePageContent />
-        <Footer />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <Main />
+          <Footer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
