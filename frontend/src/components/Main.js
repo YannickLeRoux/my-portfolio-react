@@ -10,7 +10,8 @@ import {
 
 const Main = () => {
   return (
-    <React.Fragment>
+    <main class="container" style={{ marginTop:'100px' }}>
+
       <Switch>
         <Route exact activeClassName="" path="/" component={Home} />
         <Route exact activeClassName="active" path="/about" component={About}/>
@@ -18,7 +19,7 @@ const Main = () => {
         <Route exact activeClassName="active" path="/blog" component={Blog} />
         <Route exact activeClassName="active" path="/contact" component={Contact} />
       </Switch>
-    </React.Fragment>
+    </main>
   );
 };
 

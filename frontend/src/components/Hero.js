@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LazyHero from 'react-lazy-hero';
 import { Jumbotron, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import '../assets/css/Paralax-Hero-Banner.css';
 
 class Hero extends Component {
@@ -18,7 +19,7 @@ class Hero extends Component {
     render() {
 
         return (
-          <div>
+          <section>
             <LazyHero
             className="hero"
             imageSrc="../img/hero-background-technology.jpg"
@@ -33,11 +34,14 @@ class Hero extends Component {
 Good programmers write code that humans can understand.<i class="fa fa-quote-right"></i></h1>
                     <p style={{ color: 'white' }}> - Martin Fowler</p>
                     </div>
-                    <Button className="btn btn-primary btn-lg hero-button anim-button" color="primary">Learn About Me</Button>
+                    <Link to="/about">
+                    <Button className="btn btn-primary btn-lg hero-button anim-button" color="primary">Learn About Me
+                    </Button>
+                    </Link>
                 </Jumbotron>
               </LazyHero>
 
-          </div>
+          </section>
         );
 
     }

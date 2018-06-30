@@ -29,9 +29,9 @@
 }
 
 .navigation-clean .navbar-brand {
-  font-weight:700;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight:bold;
   color:#ffffff;
-  font-family:Montserrat, sans-serif;
 }
 
 .navigation-clean .navbar-brand:hover {
@@ -59,7 +59,6 @@
 
 .navigation-clean .navbar-collapse, .navigation-clean .form-inline {
   border-top-color:#ddd;
-  font-family:Montserrat, sans-serif;
 }
 
 /* .navigation-clean.navbar-light .navbar-nav .nav-link.active, .navigation-clean.navbar-light .navbar-nav .nav-link.active:focus, .navigation-clean.navbar-light .navbar-nav .nav-link.active:hover { */
@@ -71,6 +70,8 @@
 
 .navigation-clean.navbar .navbar-nav .nav-link {
   font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   padding-left:18px;
   padding-right:18px;
   color:#ffffff;

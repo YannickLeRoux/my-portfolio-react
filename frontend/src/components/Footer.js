@@ -3,8 +3,7 @@ import '../assets/css/Footer-Dark.css';
 
 const Footer = () => {
   return (
-    <div className="footer-dark">
-      <footer>
+      <footer className="footer-dark">
         <div className="container">
           <div className="row">
             <div className="col item social">
@@ -25,7 +24,6 @@ const Footer = () => {
           <p className="copyright">Yannick Le Roux © 2018</p>
         </div>
       </footer>
-    </div>
     );
 }
 

@@ -27,6 +27,7 @@ export default function() {
         const img = this.querySelector('img');
         const overlay = this.querySelector('.overlay');
 
+
         img.classList.add('img-hover');
         overlay.classList.add('overlay-hover');
 

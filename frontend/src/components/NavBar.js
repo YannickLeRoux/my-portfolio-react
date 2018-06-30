@@ -32,12 +32,13 @@ class NavBar extends Component {
   }
   render() {
     return (
+      <header>
       <nav className="navbar navbar-light navbar-expand-md navigation-clean">
       <div className="container">
         <Link className="navbar-brand" to='/'>Yannick Le Roux </Link>
         <span id="tagline" className="navbar-brand">
           <i className="fa fa-laptop" style={{color: 'white'}}></i>
-          <small> Developer in the making</small>
+          <small>  Developer in the making</small>
         </span>
         <button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
           <span className="sr-only">Toggle navigation</span>
@@ -63,6 +64,7 @@ class NavBar extends Component {
         </div>
       </div>
     </nav>
+    </header>
       // <div>
       //   <Navbar style={ styles.navbarStyle } expand="md">
       //     <NavbarBrand

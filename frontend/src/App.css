@@ -12,7 +12,6 @@
 }
 .homepage-title {
   font-size:3.375em;
-  font-family:Dosis, sans-serif;
   color:#FFFFFF;
   font-weight: 400;
 }
@@ -24,20 +23,32 @@
   background-size:auto;
   background-position:left;
   background-color:rgba(0,0,0,0.2);
+
+}
+
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 70pt;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+
+}
+
+
+h2 {
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:24pt;
+  letter-spacing: 0.12em;
+  color:#2C363F;
 }
 
 p {
-  font-family:'Open Sans', sans-serif;
-  font-weight:500;
-  font-size:18px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:16pt;
   color:rgb(125,130,133);
 }
 
-h2 {
-  font-family:'Muli', sans-serif;
-  font-size:2.25em;
-  color:#2C363F;
-}
 
 .paragraph {
   text-align:center;
