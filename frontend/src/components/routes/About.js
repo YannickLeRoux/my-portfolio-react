@@ -19,7 +19,7 @@ class About extends Component {
           <br/> For example, I started automating time consuming tasks at my current job.</p>
         </blockquote>
         </div>
-        <p><strong>My Objective:</strong> Get a first developer job in 2018.</p>
+        <h1>My Objective:</h1><h2> Get a first developer job in 2018.</h2>
       </div>
       <hr/>
     </div>
