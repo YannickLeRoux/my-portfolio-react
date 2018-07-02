@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PortfolioCard from '../PortfolioCard';
 import ReposList from '../ReposList';
 
+import myScript from '../../assets/js/myscript';
+
 import '../../assets/css/Portfolio.css';
 
 
@@ -19,6 +21,11 @@ class Portfolio extends Component {
       .then( data => this.setState({ repos: data }))
       .catch(err => this.setState({ error: err }))
   };
+
+  componentDidMount() {
+    myScript();
+
+  }
 
   render() {
     return (

@@ -4,9 +4,30 @@ const Contact = () => {
   return (
     <React.Fragment>
       <h1>Contact me</h1>
-      <p>
-            Lorem ipsum dolor amet chillwave hella locavore vegan meditation actually lyft la croix taxidermy hot chicken craft beer art party direct trade. Jean shorts 8-bit taxidermy marfa, tattooed blue bottle thundercats distillery tumblr edison bulb. Crucifix meditation meh migas green juice stumptown flannel. Aesthetic godard taiyaki cold-pressed forage fam chicharrones palo santo tacos church-key mixtape edison bulb small batch. Knausgaard tbh craft beer austin aesthetic cray ennui snackwave mumblecore readymade food truck schlitz chicharrones.
-      </p>
+      <div className="contact-clean">
+        <div className="container mb-5">
+          <div className="row">
+            <div className="col-md-4 col-sm-12 my-auto text-center">
+              <p className="text-center"> Please let me know how I could help you! ✍️ </p>
+              <p>Are you looking to add a highly motivated Junior Developer to your team ? 🙋‍♂️</p>
+              <p>Do you just need a cool website? </p>
+
+              <p className="text-center mb-2">I am looking forward to hearing from you!</p>
+            </div>
+            <div className="col-md-8 col-sm-12">
+
+              <form method="post" noValidate>
+                <h2 className="text-center">Contact Form</h2>
+                <div className="form-group">
+                  <div className="form-group">
+                    <button className="btn btn-primary btn-lg hero-button" type="submit"> Send </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   );
 

@@ -87,7 +87,7 @@
 }
 
 .img-hover {
-  box-shadow: 4px 5px 5px rgb(43, 43, 43, 0.5);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   background-color: rgba(33,140,182,0.3);
   transform: scale(1.1);
   filter: blur(.25px);
@@ -124,4 +124,8 @@
   text-align: center;
   background-color: transparent;
   text-transform: uppercase;
+}
+
+.repolistitem {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
