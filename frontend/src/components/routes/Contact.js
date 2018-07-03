@@ -1,9 +1,11 @@
 import React from 'react';
+import ContactForm from '../ContactForm';
+
+import '../../assets/css/Contact-Form-Clean.css';
 
 const Contact = () => {
   return (
     <React.Fragment>
-      <h1>Contact me</h1>
       <div className="contact-clean">
         <div className="container mb-5">
           <div className="row">
@@ -15,15 +17,7 @@ const Contact = () => {
               <p className="text-center mb-2">I am looking forward to hearing from you!</p>
             </div>
             <div className="col-md-8 col-sm-12">
-
-              <form method="post" noValidate>
-                <h2 className="text-center">Contact Form</h2>
-                <div className="form-group">
-                  <div className="form-group">
-                    <button className="btn btn-primary btn-lg hero-button" type="submit"> Send </button>
-                  </div>
-                </div>
-              </form>
+            <ContactForm />
             </div>
           </div>
         </div>

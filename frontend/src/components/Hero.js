@@ -29,9 +29,9 @@ class Hero extends Component {
             style={{top: this.state.offsetHeight }}
             >
                 <Jumbotron className="jumbotron hero-technology" style={ styles.jumboStyle }>
-                <div class="container home-title-container">
-                    <h1 className="homepage-title"><i class="fa fa-quote-left"></i> Any fool can write code that a computer can understand.
-Good programmers write code that humans can understand.<i class="fa fa-quote-right"></i></h1>
+                <div className="container home-title-container">
+                    <h1 className="homepage-title"><i className="fa fa-quote-left"></i> Any fool can write code that a computer can understand.
+Good programmers write code that humans can understand.<i className="fa fa-quote-right"></i></h1>
                     <p style={{ color: 'white' }}> - Martin Fowler</p>
                     </div>
                     <Link to="/about">
