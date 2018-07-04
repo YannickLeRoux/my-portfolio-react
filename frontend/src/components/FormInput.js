@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FormInput = ({ name, label, type}) => {
+const FormInput = ({ inputName, inputLabel, inputType, inputValue, onInputChange }) => {
   return (
     <p className="form-group">
-      <label for={name}>{ label }</label>
-      <input className="form-control" type={type} id={name} name={name} />
+      <label for={inputName}>{ inputLabel }</label>
+      <input className="form-control" type={inputType} id={inputName} name={inputName} value={inputValue} onChange={onInputChange} />
     </p>
   );
 };

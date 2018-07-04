@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'portfolio',
     'blog',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
