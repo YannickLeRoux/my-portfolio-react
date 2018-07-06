@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/css/Footer-Dark.css';
 
 const Footer = () => {
+  const year = new Date().getFullYear().toString();
   return (
       <footer className="footer-dark">
         <div className="container">
@@ -21,7 +22,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <p className="copyright">Yannick Le Roux © 2018</p>
+          <p className="copyright">{`Yannick Le Roux © ${year}`}</p>
         </div>
       </footer>
     );

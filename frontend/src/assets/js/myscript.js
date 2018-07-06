@@ -7,6 +7,8 @@ export default function() {
 
     const navbar = document.querySelector('nav');
 
+    const main = document.querySelector('main');
+
     // function debounce(func, wait = 10, immediate = true) {
     //     var timeout;
     //     return function() {
@@ -56,6 +58,15 @@ export default function() {
 
 
 
+
     window.addEventListener('scroll', handleScrollDown);
 
+    function handleTopMargin() {
+        const navHeight = navbar.offsetHeight;
+        main.style.setProperty('margin-top', navHeight + 'px');
+    }
+
+    handleTopMargin();
+
+    window.addEventListener('resize', handleTopMargin);
 };

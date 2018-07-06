@@ -10,7 +10,7 @@ import {
 
 const Main = () => {
   return (
-    <main className="container" style={{ marginTop:'100px' }}>
+    <main>
 
       <Switch>
         <Route exact activeClassName="" path="/" component={Home} />

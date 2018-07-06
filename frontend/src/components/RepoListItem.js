@@ -6,15 +6,17 @@ const RepoListItem = ({ key, name, link, desc }) => {
     <React.Fragment>
       <li className="list-group-item repolistitem" key={ key }>
         <div className="row">
-        <div className="col-md-2">
-        <img src={ github }
-        className="img-fluid" />
+          <div className="col-md-2">
+            <img src={ github }
+              className="img-fluid"
+              alt="GitHub Logo"
+            />
+          </div>
+          <div className="col-md-10">
+            <a href={link}><h3>{ name }</h3></a>
+            <p> { desc }</p>
+          </div>
         </div>
-        <div className="col-md-10">
-        <a href={link}><h3>{ name }</h3></a>
-        <p> { desc }</p>
-        </div>
-      </div>
       </li>
       <hr />
     </React.Fragment>

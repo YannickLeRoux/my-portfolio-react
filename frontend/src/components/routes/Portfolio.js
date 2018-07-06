@@ -30,7 +30,7 @@ class Portfolio extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="portfolio">
+        <div className="portfolio heading-padding">
           <div className="container">
             <div className="intro">
               <h1 className="text-center">Websites</h1>

@@ -29,42 +29,40 @@ class NavBar extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     });
+    console.log(this.state);
   }
   render() {
     return (
       <header>
-      <nav className="navbar navbar-light navbar-expand-md navigation-clean">
-      <div className="container">
-        <Link className="navbar-brand" to='/'>Yannick Le Roux </Link>
-        <span id="tagline" className="navbar-brand">
-          <i className="fa fa-laptop" style={{color: 'white'}}></i>
-          <small>  Developer in the making</small>
-        </span>
-        <button className="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navcol-1">
-          <ul className="nav navbar-nav ml-auto">
+        <nav className="navbar navbar-light navbar-expand-md navigation-clean">
+          <div className="container">
+            <Link className="navbar-brand" to='/'>Yannick Le Roux </Link>
+            <span id="tagline" className="navbar-brand">
+              <i className="fa fa-laptop" style={{color: 'white'}} />
+              <small>  Developer in the making</small>
+            </span>
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="nav navbar-nav ml-auto">
 
-            <li className="nav-item" role="presentation">
-              <NavLink className="nav-link" to='/about'>About me</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-              <NavLink className="nav-link" to='/portfolio'>Portfolio</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-              <NavLink className="nav-link" to='/blog'>Blog</NavLink>
-            </li>
-            <li className="nav-item" role="presentation">
-              <NavLink className="nav-link" to='/contact'>Hire Me</NavLink>
-            </li>
+                <NavItem className="nav-item" role="presentation">
+                  <NavLink className="nav-link" to='/about'>About me</NavLink>
+                </NavItem>
+                <NavItem className="nav-item" role="presentation">
+                  <NavLink className="nav-link" to='/portfolio'>Portfolio</NavLink>
+                </NavItem>
+                <NavItem className="nav-item" role="presentation">
+                  <NavLink className="nav-link" to='/blog'>Blog</NavLink>
+                </NavItem>
+                <NavItem className="nav-item" role="presentation">
+                  <NavLink className="nav-link" to='/contact'>Hire Me</NavLink>
+                </NavItem>
 
-          </ul>
-        </div>
-      </div>
-    </nav>
-    </header>
+              </Nav>
+            </Collapse>
+          </div>
+        </nav>
+      </header>
       // <div>
       //   <Navbar style={ styles.navbarStyle } expand="md">
       //     <NavbarBrand
