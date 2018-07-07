@@ -1,11 +1,12 @@
 import axios from 'axios';
 import { FETCH_POSTS, FETCH_SINGLE_POST } from './types';
 
-const ROOT_URL = 'http://yannick-dev.com/blog/api';
+const ROOT_URL = 'https://yannick-dev.com/blog/api';
 
 export const fetchPosts = () => {
 
   const request = axios.get(`${ROOT_URL}/post?format=json`);
+  console.log(request);
 
   return {
     type: FETCH_POSTS,

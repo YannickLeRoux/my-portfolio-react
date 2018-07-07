@@ -6,6 +6,8 @@ export default function() {
     const jumbo = document.querySelector('.jumbotron');
 
     const navbar = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navCollapse = document.querySelector('.navbar-collapse');
 
     const main = document.querySelector('main');
 
@@ -67,6 +69,11 @@ export default function() {
     }
 
     handleTopMargin();
-
     window.addEventListener('resize', handleTopMargin);
+
+    function handleCloseNav() {
+        navCollapse.classList.remove('show');
+    }
+
+    navLinks.forEach(link => link.addEventListener('click', handleCloseNav));
 };

@@ -20,7 +20,17 @@ class Portfolio extends Component {
       .then( response => response.json())
       .then( data => this.setState({ repos: data }))
       .catch(err => this.setState({ error: err }))
-  };
+    };
+
+    renderRepos() {
+      return(
+        !this.state.repos.length ?
+          <p className="alert-danger">Sorry, there is a problem for your internet connection.</p>
+
+         : <ReposList repos={this.state.repos} />
+
+    );
+  }
 
   componentDidMount() {
     myScript();
@@ -47,13 +57,13 @@ class Portfolio extends Component {
               </div>
 
               <div className="col-sm-6 col-md-4 item">
-                  <PortfolioCard
+                <PortfolioCard
                 source={require('../../assets/img/raquelleroux.jpg')}
                 link="https://raquelleroux.com"
                 title="Raquel Le Roux Yoga"
                 desc="I made this website in 2015. It includes some e-commerce solutions."
                  />
-                </div>
+              </div>
 
 
               <div className="col-sm-6 col-md-4 item">
@@ -77,7 +87,7 @@ class Portfolio extends Component {
             <div className="row articles">
               <div className="col-sm-6 col-md-6 item">
 
-               <PortfolioCard
+                <PortfolioCard
                 source={require('../../assets/img/twitterpie.jpg')}
                 link="https://twitterpie.herokuapp.com/"
                 title="Twitter Pie"
@@ -91,8 +101,8 @@ class Portfolio extends Component {
                 title="Receipts Organizer"
                 desc="Create a user account and upload your receipts scans to keep them organized by date and category. Work in progress"
                  />
+              </div>
             </div>
-          </div>
           </div>
 
 
@@ -104,8 +114,7 @@ class Portfolio extends Component {
 
 
                 <h2>I currently have { this.state.repos.length } public repositories on GitHub</h2>
-                <ReposList repos={this.state.repos} />
-
+                { this.renderRepos() }
 
 
               </div>

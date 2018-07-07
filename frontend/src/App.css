@@ -211,6 +211,12 @@ blockquote p {
 	color: #2C363F;
 }
 
+.blog-post--excerpt {
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 
 .clock {
@@ -265,7 +271,7 @@ blockquote p {
 
 
 
-@media screen and (min-width:300px) {
+@media screen and (max-width:415px) {
 	.blog {
 		padding: 2px;
 	}
@@ -273,35 +279,12 @@ blockquote p {
 		padding: 15px;
 		margin: 20px 15px;
 	}
-	.make-space {
-		height:100px;
+	.homepage-title {
+		font-size: 2.375em;
 	}
 
 }
 
-
-
-@media screen and (min-width:494px) {
-	.make-space {
-		height: 62px;
-	}
-
-}
-
-
-@media screen and (min-width:768px) {
-	.make-space {
-		height:100px;
-	}
-
-}
-
-@media screen and (min-width:992px) {
-	.make-space {
-		height:70px;
-	}
-
-}
 
 
 .tech-stack {

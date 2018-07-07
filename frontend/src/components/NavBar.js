@@ -43,18 +43,18 @@ class NavBar extends Component {
             </span>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="nav navbar-nav ml-auto">
+              <Nav className="nav navbar-nav ml-auto" navbar>
 
-                <NavItem className="nav-item" role="presentation">
+                <NavItem>
                   <NavLink className="nav-link" to='/about'>About me</NavLink>
                 </NavItem>
-                <NavItem className="nav-item" role="presentation">
+                <NavItem>
                   <NavLink className="nav-link" to='/portfolio'>Portfolio</NavLink>
                 </NavItem>
-                <NavItem className="nav-item" role="presentation">
+                <NavItem>
                   <NavLink className="nav-link" to='/blog'>Blog</NavLink>
                 </NavItem>
-                <NavItem className="nav-item" role="presentation">
+                <NavItem>
                   <NavLink className="nav-link" to='/contact'>Hire Me</NavLink>
                 </NavItem>
 

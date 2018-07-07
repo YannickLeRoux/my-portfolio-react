@@ -15,7 +15,7 @@ class ContactForm extends Component {
   }
 
   handleSubmit = e => {
-    fetch("https://vibrant-williams-16080d.netlify.com/contact", {
+    fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
@@ -33,7 +33,7 @@ class ContactForm extends Component {
     const { name, email, message } = this.state;
 
     return (
-      <form  onSubmit={this.handleSubmit} name="contact">
+      <form  onSubmit={this.handleSubmit}>
         <h2 className="text-center">Contact Form</h2>
         <FormInput
           inputName="name"

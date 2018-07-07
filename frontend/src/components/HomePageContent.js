@@ -16,7 +16,7 @@ class HomePageContent extends Component {
                     <img className="tech-stack--image" src={require('../assets/img/python-django-150x150.png')} />
                   </Col>
                   <Col md="4">
-                    <img className="tech-stack--image" src={require('../assets/img/bootstrap4.png')} />
+                    <img className="tech-stack--image" src={require('../assets/img/redux-logo.png')} />
                   </Col>
               </Row>
 
