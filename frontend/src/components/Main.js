@@ -18,7 +18,8 @@ const Main = () => {
         <Route exact activeClassName="" path="/" component={Home} />
         <Route exact activeClassName="active" path="/about" component={About}/>
         <Route exact activeClassName="active" path="/portfolio" component={Portfolio} />
-        <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/blog/:slug"
+          render={(props) => <BlogPost {...this.props} {...props} />}/>
         <Route exact activeClassName="active" path="/blog" component={Blog} />
         <Route exact activeClassName="active" path="/contact" component={Contact} />
       </Switch>

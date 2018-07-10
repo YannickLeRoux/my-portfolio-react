@@ -13,8 +13,8 @@ const RepoListItem = ({ name, link, desc }) => {
             />
           </div>
           <div className="col-md-10">
-            <a href={link}><h3>{ name }</h3></a>
-            <p> { desc }</p>
+            <a href={link} target="_blank" rel="noopener noreferrer"><h3 className="repo-title">{ name }</h3></a>
+            <p className="repo-description"> { desc }</p>
           </div>
         </div>
       </li>
