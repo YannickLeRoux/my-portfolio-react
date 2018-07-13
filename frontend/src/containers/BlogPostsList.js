@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions/fetchPosts';
 
-import BlogPostsListItem from './BlogPostsListItem';
+import BlogPostsListItem from '../components/BlogPostsListItem';
+import Spinner from '../components/Spinner';
 
 class BlogPostsList extends Component {
   componentWillMount() {
@@ -30,7 +31,7 @@ class BlogPostsList extends Component {
 
   render() {
     if (!this.props.posts) {
-      return <div className="text-center">Loading...</div>
+      return <Spinner />
     }
 
     return (

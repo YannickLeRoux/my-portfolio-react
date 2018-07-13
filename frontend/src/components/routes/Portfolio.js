@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PortfolioCard from '../PortfolioCard';
-import ReposList from '../ReposList';
+import ReposList from '../../containers/ReposList';
 
 import myScript from '../../assets/js/myscript';
 
@@ -8,29 +8,6 @@ import '../../assets/css/Portfolio.css';
 
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      repos: [],
-      error: ''
-    };
-
-    fetch('https://api.github.com/users/yannickleroux/repos')
-      .then( response => response.json())
-      .then( data => this.setState({ repos: data }))
-      .catch(err => this.setState({ error: err }))
-    };
-
-    renderRepos() {
-      return(
-        !this.state.repos.length ?
-          <p className="alert-danger">Sorry, there is a problem for your internet connection.</p>
-
-         : <ReposList repos={this.state.repos} />
-
-    );
-  }
 
   componentDidMount() {
     myScript();
@@ -117,16 +94,9 @@ class Portfolio extends Component {
 
           <div className="portfolio">
             <div className="container">
-              <div className="intro">
 
-                <h1 className="text-center">Open Source Projects</h1>
+              <ReposList />
 
-
-                <h2>I currently have { this.state.repos.length } public repositories on GitHub</h2>
-                { this.renderRepos() }
-
-
-              </div>
             </div>
           </div>
         </div>

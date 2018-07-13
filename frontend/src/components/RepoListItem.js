@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import github from '../assets/img/GitHub-Mark-64px.png';
 
 const RepoListItem = ({ name, link, desc }) => {
@@ -22,6 +24,18 @@ const RepoListItem = ({ name, link, desc }) => {
     </React.Fragment>
 
   );
+};
+
+RepoListItem.defaultProps = {
+  name: '',
+  link: 'https://github.com/YannickLeRoux',
+  desc: 'No Description'
+};
+
+RepoListItem.propTypes = {
+  name: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  desc: PropTypes.string,
 };
 
 export default RepoListItem;

@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
+import Loader from 'react-loader-spinner';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchSinglePost } from '../actions/fetchPosts';
+import Spinner from './Spinner';
 
-// import '../assets/css/vim.css';
+// import '../assets/css/prism.css';
+// import prismjs from '../assets/js/prism';
 
 class BlogPost extends Component {
 
   componentWillMount() {
     this.props.fetchSinglePost(this.props.match.params.slug);
   }
+
 
   formatDate(date) {
     const dateToFormat = new Date(date)
@@ -31,8 +35,9 @@ class BlogPost extends Component {
 
 
     if (!post) {
-      return <div className="text-center">...Loading...</div>
+      return <Spinner />
     }
+
     return (
 
       <div className="blog">
@@ -47,7 +52,9 @@ class BlogPost extends Component {
 
             <div>
               <div className="blog-post--content">
-                <ReactMarkdown source={post.text} />
+                <Markdown options={{ forceBlock: true }}>
+                  {post.text}
+                </Markdown>
               </div>
 
             </div>
