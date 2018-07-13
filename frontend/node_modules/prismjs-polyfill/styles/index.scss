@@ -1,0 +1,42 @@
+@mixin common {}
+.prism-default {
+  @import "~prismjs/themes/prism";
+  @include common;
+}
+.prism-coy {
+  @import "~prismjs/themes/prism-coy";
+  @include common;
+}
+.prism-dark {
+  @import "~prismjs/themes/prism-dark";
+  @include common;
+}
+.prism-funky {
+  @import "~prismjs/themes/prism-funky";
+  @include common;
+}
+.prism-okaidia {
+  @import "~prismjs/themes/prism-okaidia";
+  @include common;
+}
+.prism-solarizedlight {
+  @import "~prismjs/themes/prism-solarizedlight";
+  @include common;
+}
+.prism-tomorrow {
+  @import "~prismjs/themes/prism-tomorrow";
+  @include common;
+}
+.prism-twilight {
+  @import "~prismjs/themes/prism-twilight";
+  @include common;
+}
+.prism-line-highlight {
+  @import "~prismjs/plugins/line-highlight/prism-line-highlight";
+}
+.prism-line-numbers {
+  @import "~prismjs/plugins/line-numbers/prism-line-numbers";
+}
+.prism-show-invisibles {
+  @import "~prismjs/plugins/show-invisibles/prism-show-invisibles";
+}

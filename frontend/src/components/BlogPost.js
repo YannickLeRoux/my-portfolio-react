@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import Markdown from 'markdown-to-jsx';
-import Loader from 'react-loader-spinner';
+import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Prism from 'prismjs';
 import { fetchSinglePost } from '../actions/fetchPosts';
 import Spinner from './Spinner';
 
-// import '../assets/css/prism.css';
-// import prismjs from '../assets/js/prism';
+import '../assets/css/prism.css';
+
 
 class BlogPost extends Component {
 
   componentWillMount() {
     this.props.fetchSinglePost(this.props.match.params.slug);
+  }
+
+  componentDidMount() {
+   Prism.highlightAll();
+  }
+
+  componentDidUpdate() {
+    Prism.highlightAll();
   }
 
 
@@ -52,9 +60,7 @@ class BlogPost extends Component {
 
             <div>
               <div className="blog-post--content">
-                <Markdown options={{ forceBlock: true }}>
-                  {post.text}
-                </Markdown>
+                <ReactMarkdown source={post.text} />
               </div>
 
             </div>
