@@ -29,7 +29,7 @@ class Hero extends Component {
             parallaxOffset={100}
             style={{padding: '-15px' }}
             >
-                <div className="container home-title-container">
+                <div className="home-title-container">
                     <h1 className="homepage-title"><i className="fa fa-quote-left"></i> Any fool can write code that a computer can understand.
 Good programmers write code that humans can understand.<i className="fa fa-quote-right"></i></h1>
                     <p style={{ color: 'white' }}> - Martin Fowler</p>
