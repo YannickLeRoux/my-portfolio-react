@@ -26,7 +26,7 @@ class About extends Component {
         </div>
         <div className="container">
           <div className="container my-5">
-            <div className="text-center"><a href="http://yannick-dev.com/static/files/Resume-v7.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg hero-button anim-button mb-4" id="download" >Download my Resume</a></div>
+            <div className="text-center"><a href="http://yannick-dev.com/static/files/Resume-v10.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg hero-button anim-button mb-4" id="download" >Download my Resume</a></div>
 
             <br/>
             <p>After working for ten years as a sound engineer and DJ in the music industry, I felt a desire to switch career early 2017.<br/>
