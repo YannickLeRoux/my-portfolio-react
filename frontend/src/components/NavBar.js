@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import FontAwesome from 'react-fontawesome';
 import '../assets/css/Navigation-Clean.css';
-import * as Colors from '../constants/Colors';
 
 import {
   Collapse,
-  Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+   } from 'reactstrap';
 
 class NavBar extends Component {
   constructor(props) {

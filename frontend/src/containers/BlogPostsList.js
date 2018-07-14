@@ -6,6 +6,8 @@ import { fetchPosts } from '../actions/fetchPosts';
 import BlogPostsListItem from '../components/BlogPostsListItem';
 import Spinner from '../components/Spinner';
 
+import Overdrive from 'react-overdrive';
+
 class BlogPostsList extends Component {
   componentWillMount() {
     this.props.fetchPosts();
@@ -36,7 +38,9 @@ class BlogPostsList extends Component {
 
     return (
       <div className="blog">
+        <Overdrive id="main-focus" duration="700" animationDelay="1">
         <h1>Blog Posts</h1>
+        </Overdrive>
         {this.props.posts.map(post => this.renderPosts(post))}
 
       </div>

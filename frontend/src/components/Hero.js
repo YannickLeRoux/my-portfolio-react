@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import LazyHero from 'react-lazy-hero';
-import { Jumbotron, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../assets/css/Paralax-Hero-Banner.css';
-
-import { heroBackground } from '../assets/img/hero-background-technology.jpg';
 
 class Hero extends Component {
     state = {
@@ -24,7 +22,7 @@ class Hero extends Component {
           <section>
             <LazyHero
             // className="hero"
-            imageSrc='https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-0.3.5&s=413bf668e2139f6aae03f6355bcd59a7&auto=format&fit=crop&w=1051&q=80'
+            imageSrc='https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e3b92161cef01773ab8e0f83d4da1126&auto=format&fit=crop&w=1050&q=80'
             color='rgb(0,0,0)'
             opacity={0.2}
             minHeight='75vh'
@@ -48,11 +46,5 @@ Good programmers write code that humans can understand.<i className="fa fa-quote
     }
 }
 
-const styles = {
-    jumboStyle: {
-        backgroundColor: 'rgba(0,0,0,0.2)',
-
-    }
-};
 
 export default Hero;

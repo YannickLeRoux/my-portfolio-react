@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Overdrive from 'react-overdrive'
 import clockJS from '../../assets/js/clock';
 
 class About extends Component {
@@ -19,7 +19,8 @@ class About extends Component {
                   <br/> For example, I started automating time consuming tasks at my current job...</p>
               </blockquote>
             </div>
-            <h1>My Objective:</h1><h2> Get a first developer job in 2018.</h2>
+            <Overdrive id="main-focus" duration="700" animationDelay="1">
+            <h1>My Objective</h1></Overdrive><h2> Get a first developer job in 2018.</h2>
           </div>
           <hr/>
         </div>
@@ -51,7 +52,7 @@ class About extends Component {
             <h4 className="text-center mb-5"><i className="fa fa-quote-left"></i> Time to get my first developer job :) ! <i className="fa fa-quote-right"></i></h4>
 
 
-            <p>The first personal projects I undertook were driven by the idea of making my current job (DJ) easier. <a href="https://github.com/YannickLeRoux/mp3_organizer" target="_blank">Organizing the music files</a> in
+            <p>The first personal projects I undertook were driven by the idea of making my current job (DJ) easier. <a href="https://github.com/YannickLeRoux/mp3_organizer" target="_blank" rel="noopener noreferrer">Organizing the music files</a> in
 			my laptop or <a href="https://github.com/YannickLeRoux/DMC_Chart_Parser" target="_blank" rel="noopener noreferrer">reading through tons of blog articles and charts</a> to collect good tracks to play, could be very boring and repetitive. These things, I felt, could definitely be helped by a little bit of code.<br/><br/>
 
 			Prior to this, I had been building websites using WordPress for years. But once I knew how to write my own code, I wanted to know how to build a website from scratch.</p>

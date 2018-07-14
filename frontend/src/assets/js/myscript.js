@@ -1,31 +1,12 @@
-export default function() {
+export default function () {
 
-    const images = document.querySelectorAll('.image-portfolio');
+  const images = document.querySelectorAll('.image-portfolio');
 
-    const laptop = document.querySelector('#laptop-index');
-    const jumbo = document.querySelector('.jumbotron');
+  const navbar = document.querySelector('nav');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navCollapse = document.querySelector('.navbar-collapse');
 
-    const navbar = document.querySelector('nav');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navCollapse = document.querySelector('.navbar-collapse');
-
-    const main = document.querySelector('main');
-
-    // function debounce(func, wait = 10, immediate = true) {
-    //     var timeout;
-    //     return function() {
-    //       var context = this, args = arguments;
-    //       var later = function() {
-    //         timeout = null;
-    //         if (!immediate) func.apply(context, args);
-    //       };
-    //       var callNow = immediate && !timeout;
-    //       clearTimeout(timeout);
-    //       timeout = setTimeout(later, wait);
-    //       if (callNow) func.apply(context, args);
-    //     };
-    //   };
-
+  const main = document.querySelector('main');
 
     function handleImgOver() {
         const img = this.querySelector('img');

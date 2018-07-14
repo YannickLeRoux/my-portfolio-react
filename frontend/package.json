@@ -16,6 +16,7 @@
     "react-loader-spinner": "^2.1.0",
     "react-markdown": "^3.3.4",
     "react-markdown-plus": "^0.1.1-a",
+    "react-overdrive": "0.0.10",
     "react-popper": "^1.0.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",

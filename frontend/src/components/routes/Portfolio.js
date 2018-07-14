@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PortfolioCard from '../PortfolioCard';
 import ReposList from '../../containers/ReposList';
 
+import Overdrive from 'react-overdrive';
+
 import myScript from '../../assets/js/myscript';
 
 import '../../assets/css/Portfolio.css';
@@ -20,7 +22,9 @@ class Portfolio extends Component {
         <div className="portfolio heading-padding">
           <div className="container">
             <div className="intro">
+              <Overdrive id="main-focus" duration="500" animationDelay="1" >
               <h1 className="text-center">Websites</h1>
+              </Overdrive>
               <h2 className="text-center">Before learning to code, I used to create website using Wordpress. See some below.</h2>
             </div>
             <div className="row articles">
