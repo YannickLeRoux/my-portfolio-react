@@ -5,6 +5,7 @@ const URL = 'https://api.github.com/users/yannickleroux/repos';
 
 export const fetchRepos = () => {
   const request = axios.get(URL)
+
   return(
         {
             type: FETCH_REPOS,

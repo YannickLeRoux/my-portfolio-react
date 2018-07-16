@@ -15,11 +15,11 @@ class About extends Component {
           <div className="intro">
             <div className="section-blockquote mt-5 heading-padding">
               <blockquote>
-                <p>Teaching myself coding on a daily basis since May 2017, I enjoy solving real-life problems with what I learned.
-                  <br/> For example, I started automating time consuming tasks at my current job...</p>
+                <p>Teaching myself to code daily since May 2017, I enjoy solving real-life problems with what I learned.
+                  <br/>For example, I started automating time consuming tasks at my current job...</p>
               </blockquote>
             </div>
-            <Overdrive id="main-focus" duration="700" animationDelay="1">
+            <Overdrive id="main-focus" duration={500}>
             <h1>My Objective</h1></Overdrive><h2> Get a first developer job in 2018.</h2>
           </div>
           <hr/>

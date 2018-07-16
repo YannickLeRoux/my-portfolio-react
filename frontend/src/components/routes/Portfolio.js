@@ -22,10 +22,10 @@ class Portfolio extends Component {
         <div className="portfolio heading-padding">
           <div className="container">
             <div className="intro">
-              <Overdrive id="main-focus" duration="500" animationDelay="1" >
+              <Overdrive id="main-focus" duration={500} >
               <h1 className="text-center">Websites</h1>
               </Overdrive>
-              <h2 className="text-center">Before learning to code, I used to create website using Wordpress. See some below.</h2>
+              <h2 className="text-center">See below some samples of my work.</h2>
             </div>
             <div className="row articles">
               <div className="col-sm-6 col-md-4 item">
@@ -39,10 +39,10 @@ class Portfolio extends Component {
 
               <div className="col-sm-6 col-md-4 item">
                 <PortfolioCard
-                  source={require('../../assets/img/raquelleroux.jpg')}
-                  link="http://raquelleroux.com"
-                  title="Raquel Le Roux Yoga"
-                  desc="I made this website in 2015. It includes some e-commerce solutions."
+                  source={require('../../assets/img/fth.jpg')}
+                  link="https://sharp-wiles-7282cc.netlify.com/"
+                  title="Find The Hare"
+                  desc="This is an order from a photo artist. ReactJS, CSS animations and randomly generated Gallery, no scroll. I'm currently improving it."
                  />
               </div>
 
@@ -52,7 +52,7 @@ class Portfolio extends Component {
                   source={require('../../assets/img/djyanic.jpg')}
                   link="https://dj-yanic.com"
                   title="DJ Yanic"
-                  desc="I created this website in 2014 to promote my DJ activity. Wordpress."
+                  desc="I created this website in 2014 to promote my DJ activity. Build with Wordpress."
                  />
               </div>
             </div>
@@ -81,7 +81,7 @@ class Portfolio extends Component {
                   source={require('../../assets/img/twitterpie.jpg')}
                   link="https://twitterpie.herokuapp.com/"
                   title="Twitter Pie"
-                  desc="Flask app that takes a Twitter handle and returns a charts for the 10 most used words in the user feed."
+                  desc="Flask app that takes a Twitter handle and returns a chart for the 10 most used words in the user feed."
                  />
               </div>
               <div className="col-sm-6 col-md-4 item">

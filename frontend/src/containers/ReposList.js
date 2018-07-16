@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import _ from 'lodash';
 
 import PropType from 'prop-types';
 
@@ -43,7 +44,8 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ fetchRepos }, dispatch)
 }
 const mapStateToProps = (state) => {
-  return {repos: state.repos.all }
+  const reposOrdered = _.orderBy(state.repos.all,['updated_at'], ['desc']);
+  return {repos: reposOrdered }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ReposList);
 

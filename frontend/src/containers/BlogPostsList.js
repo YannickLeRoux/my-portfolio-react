@@ -6,7 +6,6 @@ import { fetchPosts } from '../actions/fetchPosts';
 import BlogPostsListItem from '../components/BlogPostsListItem';
 import Spinner from '../components/Spinner';
 
-import Overdrive from 'react-overdrive';
 
 class BlogPostsList extends Component {
   componentWillMount() {
@@ -17,7 +16,7 @@ class BlogPostsList extends Component {
 
   renderPosts(post) {
     return (
-        <BlogPostsListItem
+      <BlogPostsListItem
           key={post.id}
           title={post.title}
           author={post.author}
@@ -37,14 +36,9 @@ class BlogPostsList extends Component {
     }
 
     return (
-      <div className="blog">
-        <Overdrive id="main-focus" duration="700" animationDelay="1">
-        <h1>Blog Posts</h1>
-        </Overdrive>
+        <div>
         {this.props.posts.map(post => this.renderPosts(post))}
-
-      </div>
-
+        </div>
     );
   }
 };
