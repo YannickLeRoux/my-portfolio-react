@@ -1,6 +1,7 @@
 :root {
   --themeblue: #218CB6;
   --satblue: #00A7E8;
+  --hoverlinks: #59c3c3;
   --darkerblue: #066C94;
   --footerbackground: #273136;
   --textgrey: #273136;
@@ -141,9 +142,14 @@ blockquote p {
 }
 
 .btn-primary {
-	background-color: var(--satblue);
-	border-color: var(--themeblue);
+	background-color: var(--themeblue);
+	border-color: var(--satblue);
 	border-radius: 0px;
+}
+
+.btn-primary:hover {
+	background-color: var(--hoverlinks);
+	border-color: var(--lightgreen);
 }
 
 

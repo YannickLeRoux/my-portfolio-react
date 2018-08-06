@@ -6,7 +6,7 @@ class HomePageContent extends Component {
     render() {
         return(
             <Container className="mb-5 text-center" style= {{marginTop: '50px'}}>
-                  <h2>Welcome to my portfolio website!</h2>
+                  <h2>Welcome to my portfolio</h2>
               <p>My name is Yannick Le Roux, <strong>Software</strong> and <strong>Web</strong> developer <em>in the making</em>.</p>
               <Row className="tech-stack">
                   <Col md="4">

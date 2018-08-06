@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import _ from 'lodash';
+
 import { fetchPosts } from '../actions/fetchPosts';
 
 import BlogPostsListItem from '../components/BlogPostsListItem';
@@ -11,8 +13,6 @@ class BlogPostsList extends Component {
   componentWillMount() {
     this.props.fetchPosts();
   }
-
-  // <Link to={`posts/${post.slug}`} >
 
   renderPosts(post) {
     return (
@@ -47,6 +47,7 @@ const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ fetchPosts }, dispatch)
 }
 const mapStateToProps = (state) => {
-  return {posts: state.posts.all }
+  const postsOrdered = _.orderBy(state.posts.all,['created_date'], ['desc']);
+  return {posts: postsOrdered }
  }
 export default connect(mapStateToProps, mapDispatchToProps)(BlogPostsList);

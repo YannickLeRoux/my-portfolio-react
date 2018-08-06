@@ -55,51 +55,9 @@ class NavBar extends Component {
           </div>
         </nav>
       </header>
-      // <div>
-      //   <Navbar style={ styles.navbarStyle } expand="md">
-      //     <NavbarBrand
-      //     style={styles.brandStyle}
-      //     href="/">Yannick Le Roux - <small>Developer in the making</small></NavbarBrand>
-      //     <NavbarToggler onClick={this.toggle} />
-      //     <Collapse isOpen={this.state.isOpen} navbar>
-      //       <Nav className="ml-auto" navbar>
-      //         <NavItem>
-      //           <NavLink style={ styles.navLinkStyle }
-      //           href="/components/">About Me</NavLink>
-      //         </NavItem>
-      //         <NavItem>
-      //           <NavLink style={ styles.navLinkStyle }
-      //           href="/components/">Portfolio</NavLink>
-      //         </NavItem>
-      //         <NavItem>
-      //           <NavLink style={ styles.navLinkStyle }
-      //           href="/components/">Blog</NavLink>
-      //         </NavItem>
-      //         <NavItem>
-      //           <NavLink style={ styles.navLinkStyle }
-      //            href="https://github.com/reactstrap/reactstrap">Hire Me</NavLink>
-      //         </NavItem>
-      //       </Nav>
-      //     </Collapse>
-      //   </Navbar>
-      // </div>
+
     );
   }
 }
-
-// const styles = {
-//   brandStyle: {
-//     color: 'white'
-//   },
-//   navbarStyle : {
-//     backgroundColor: Colors.navBlue,
-//     position: 'fixed',
-//     width: '100%',
-//     zIndex: '1223'
-//   },
-//   navLinkStyle: {
-//     color: 'white'
-//   }
-// }
 
 export default NavBar;
