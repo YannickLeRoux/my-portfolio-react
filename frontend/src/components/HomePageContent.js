@@ -21,7 +21,7 @@ class HomePageContent extends Component {
               </Row>
 
 <Container>
-                  <p>Self taught, I had fun building this website with <strong>React JS</strong> for the UI and <strong>Django Rest Framework</strong> that takes care of the back-end, basically just serving the blog posts here.</p>
+                  <p>Self taught, I had fun building this website with <strong>React JS</strong>, <strong>Redux</strong> and <strong>Django Rest Framework</strong>.</p>
                   <p>Here is the <a target="_blank" rel="noopener noreferrer" href="https://github.com/YannickLeRoux/my-portfolio-react/tree/master/frontend">source code</a>.</p>
                   <p>Please visit the other sections to know more about me and my past works.</p>
 		      <p>I like to make any kind of applications that could make your life easier or, very humbly, make the world a better place. :)</p>

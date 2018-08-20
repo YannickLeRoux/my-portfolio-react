@@ -6,6 +6,7 @@ import Prism from 'prismjs';
 import { fetchSinglePost } from '../actions/fetchPosts';
 import Spinner from './Spinner';
 
+import '../assets/css/Blog.css';
 import '../assets/css/prism.css';
 
 

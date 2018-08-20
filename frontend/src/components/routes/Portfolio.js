@@ -33,7 +33,7 @@ class Portfolio extends Component {
                   source={require('../../assets/img/djnewyork.jpg')}
                   link="https://dj-newyork.com"
                   title="DJ-NewYork Agency"
-                  desc="Made in 2017, this website allows the user to browse the talents of this agency and ask for their availability."
+                  desc="Built in 2017, this website allows the user to browse the talents of this agency and ask for their availability."
                  />
               </div>
 
@@ -52,7 +52,7 @@ class Portfolio extends Component {
                   source={require('../../assets/img/djyanic.jpg')}
                   link="https://dj-yanic.com"
                   title="DJ Yanic"
-                  desc="I created this website in 2014 to promote my DJ activity. Build with Wordpress."
+                  desc="I created this website in 2014 to promote my DJ activity. Built with Wordpress."
                  />
               </div>
             </div>

@@ -1,12 +1,15 @@
 pre {
-    opacity: 0.7;
-    background-color: #066C94;
-    padding: 15px;
-    color: white;
+    margin: 30px 0 50px 0;
 }
 
 code {
-    opacity: 0.7;
-    background-color: #066C94;
-    color: white;
+    margin: 30px 0 50px 0;
+}
+
+.blog-post--content {
+    padding: 10px;
+}
+
+.blog-post--content li {
+    line-height: 2em;
 }

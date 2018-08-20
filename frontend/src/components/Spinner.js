@@ -5,7 +5,7 @@ const Spinner = () => {
   return (
     <Loader
       className="text-center my-5 mx-auto"
-      style= {style}
+      style={style}
       type="TailSpin"
       color="#218CB6"
       height="50"
@@ -15,7 +15,7 @@ const Spinner = () => {
 
 };
 
-const style= {
+const style = {
   display: 'flex',
   justifyContent: 'center'
 };
