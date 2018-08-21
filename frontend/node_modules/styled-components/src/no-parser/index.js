@@ -5,6 +5,10 @@ import flatten from './flatten'
 import stringifyRules from './stringifyRules'
 import css from './css'
 
+/* Import utils */
+import isStyledComponent from '../utils/isStyledComponent'
+import consolidateStreamedStyles from '../utils/consolidateStreamedStyles'
+
 /* Import singletons */
 import generateAlphabeticName from '../utils/generateAlphabeticName'
 import ServerStyleSheet from '../models/ServerStyleSheet'
@@ -28,7 +32,7 @@ import withTheme from '../hoc/withTheme'
 const ComponentStyle = _ComponentStyle(
   generateAlphabeticName,
   flatten,
-  stringifyRules,
+  stringifyRules
 )
 const constructWithOptions = _constructWithOptions(css)
 const StyledComponent = _StyledComponent(ComponentStyle, constructWithOptions)
@@ -38,12 +42,20 @@ const keyframes = _keyframes(generateAlphabeticName, stringifyRules, css)
 const injectGlobal = _injectGlobal(stringifyRules, css)
 const styled = _styled(StyledComponent, constructWithOptions)
 
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line no-console
+  console.warn(
+    'Usage of the preprocessing plugin is deprecated. The no-parser bundle will be removed in the next major release. \nPlease disable the preprocess option in your Babel config and upgrade to a newer version of our plugin which removes this option entirely.'
+  )
+}
 /* Export everything */
 export default styled
 export {
   css,
   keyframes,
   injectGlobal,
+  isStyledComponent,
+  consolidateStreamedStyles,
   ThemeProvider,
   withTheme,
   ServerStyleSheet,

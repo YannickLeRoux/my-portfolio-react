@@ -33,20 +33,21 @@ class ReposList extends Component {
         <h1 className="text-center">Open Source Projects</h1>
         <Query query={GET_REPOS} >
         { ({loading, error,data}) => {
-          if (error) return <div>There was an error fetching the repositories</div>
+          if (error) return <div>{error.message}</div>
           if (loading || !data ) return <Spinner />
 
           return (
             <React.Fragment>
-            <h2>I currently have { GET_REPOS.length } public repositories on GitHub</h2>
+            <h2>I currently have { data.user.repositories.edges.length } public repositories on GitHub</h2>
             <ul className="list-group">
-              { this.props.repos.map((repo) => {
+              {console.log(data)}
+              { data.user.repositories.edges.map((repo) => {
           return (
             <RepoListItem
-              key= { repo.id }
-              name={ repo.name }
-              link={ repo.url }
-              desc={ repo.description }
+              key= { repo.node.id }
+              name={ repo.node.name }
+              link={ repo.node.url }
+              desc={ repo.node.description }
 
             />
           );

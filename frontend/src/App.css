@@ -4,11 +4,11 @@
   --hoverlinks: #59c3c3;
   --darkerblue: #066C94;
   --footerbackground: #273136;
-  --textgrey: #273136;
   --lightgreen: #99DDC8;
   --washedyellow: #E7EB90;
   --raisinblack: #23231A;
-  --softwhite: #EBF2FA;
+	--softwhite: #EBF2FA;
+	--textGray: #676767;
 
 }
 
@@ -42,15 +42,18 @@ h1 {
 h2 {
 	text-transform: uppercase;
 	font-family: 'Roboto Condensed', sans-serif;
-	font-size:24pt;
-	letter-spacing: 0.12em;
+	font-size:20pt;
+	letter-spacing: 0.10em;
 	color:#2C363F;
 }
 
 p {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size:16pt;
-	color:rgb(125,130,133);
+	color: var(--textGray);
+	letter-spacing: 0.001em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em
 }
 
 
