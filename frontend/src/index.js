@@ -9,7 +9,7 @@ import { ApolloProvider } from 'react-apollo';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-
+require('dotenv').config()
 const API = 'https://api.github.com/graphql';
 
 const httpLink = createHttpLink({
@@ -18,7 +18,7 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = '741c377c54c48f3762751768faf253eb26d975e6';
+  const token = process.env.REACT_APP_GITHUB_TOKEN;
   // return the headers to the context so httpLink can read them
   return {
     headers: {
