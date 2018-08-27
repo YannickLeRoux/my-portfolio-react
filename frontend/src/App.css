@@ -63,7 +63,7 @@ p {
 	margin-bottom: 1.5em
 }
 
-li {
+.tech-stack > li {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size:16pt;
 	color: var(--textGray);
