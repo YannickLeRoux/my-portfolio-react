@@ -38,7 +38,7 @@ class ReposList extends Component {
 
           return (
             <React.Fragment>
-            <h2>I currently have { data.user.repositories.edges.length } public repositories on GitHub</h2>
+            <h2>The { data.user.repositories.edges.length } latest public projects I worked on:</h2>
             <ul className="list-group">
               {console.log(data)}
               { data.user.repositories.edges.map((repo) => {

@@ -13,3 +13,7 @@ code {
 .blog-post--content li {
     line-height: 2em;
 }
+
+.blog-post--date, .blog-post--category {
+    color: #6c757d!important;
+}

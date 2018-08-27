@@ -53,8 +53,8 @@ class BlogPost extends Component {
         <div className="blog-post">
           <div className="container">
             <h2 className="blog-post--title">{post.title}</h2>
-            <h6 className="blog-post--category">Category: { post.category}</h6>
-            <h6 className="blog-post--date">Published: { this.formatDate(post.published_date) }</h6>
+            <h6 className="blog-post--category text-muted">Category: { post.category}</h6>
+            <h6 className="blog-post--date text-muted">Published: { this.formatDate(post.published_date) }</h6>
           </div>
           <div className="container">
             <hr />

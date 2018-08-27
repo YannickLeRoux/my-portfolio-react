@@ -29,6 +29,11 @@
 
 }
 
+.text-container {
+	max-width: 1000px;
+	width: 80%;
+}
+
 
 h1 {
 	font-family: 'Roboto Condensed', sans-serif;
@@ -45,6 +50,8 @@ h2 {
 	font-size:20pt;
 	letter-spacing: 0.10em;
 	color:#2C363F;
+	word-spacing: 0.08em;
+	line-height: 1.75;
 }
 
 p {
@@ -54,6 +61,22 @@ p {
 	letter-spacing: 0.001em;
 	line-height: 1.5em;
 	margin-bottom: 1.5em
+}
+
+li {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size:16pt;
+	color: var(--textGray);
+	letter-spacing: 0.001em;
+	line-height: 1.3em;
+	margin-bottom: 1.3em;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.center-list {
+	display: table;
+	margin: 50px auto;
 }
 
 
