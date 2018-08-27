@@ -33,14 +33,13 @@ class ReposList extends Component {
         <h1 className="text-center">Open Source Projects</h1>
         <Query query={GET_REPOS} >
         { ({loading, error,data}) => {
-          if (error) return <div>{error.message}</div>
+          if (error) return <div>There is a problem connecting to the GitHub API. Please visit <a href="https://github.com/YannickLeRoux?tab=repositories" target="_blank">my Repos list here.</a></div>
           if (loading || !data ) return <Spinner />
 
           return (
             <React.Fragment>
             <h2>The { data.user.repositories.edges.length } latest public projects I worked on:</h2>
             <ul className="list-group">
-              {console.log(data)}
               { data.user.repositories.edges.map((repo) => {
           return (
             <RepoListItem
