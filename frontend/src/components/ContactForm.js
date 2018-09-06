@@ -20,7 +20,7 @@ class ContactForm extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Thank you for contacting me! I'll get back to you asap"))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -51,7 +51,7 @@ class ContactForm extends Component {
 
 
         <p className="form-group">
-          <label for="message">Message:</label>
+          <label htmlFor="message">Message:</label>
           <textarea onChange={this.handleChange} className="form-control" id="message" name="message" value={message}></textarea>
         </p>
         <p className="form-group">

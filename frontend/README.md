@@ -1,7 +1,7 @@
 # Portfolio Website build with:
 
-* ReactJS
-* Router4
-* Redux
+* React 16.4
+* Router 4
+* Redux 4
 * Django Rest Framework
 * Apollo

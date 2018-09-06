@@ -1,5 +1,5 @@
 :root {
-  --themeblue: #218CB6;
+  --themeblue: #127EA5;
   --satblue: #00A7E8;
   --hoverlinks: #59c3c3;
   --darkerblue: #066C94;
@@ -8,7 +8,8 @@
   --washedyellow: #E7EB90;
   --raisinblack: #23231A;
 	--softwhite: #EBF2FA;
-	--textGray: #676767;
+	--textGray: #727779;
+	--linkscolor: #0071EB
 
 }
 
@@ -61,6 +62,10 @@ p {
 	letter-spacing: 0.001em;
 	line-height: 1.5em;
 	margin-bottom: 1.5em
+}
+
+a {
+	color: var(--linkscolor);
 }
 
 .tech-stack > li {
@@ -256,7 +261,7 @@ blockquote p {
 .clock {
 	width: 10rem;
 	height: 10rem;
-	border:10px solid #218CB6;
+	border:10px solid var(--themeblue);
 	border-radius:50%;
 	margin:50px auto 30px auto;
 	position: relative;

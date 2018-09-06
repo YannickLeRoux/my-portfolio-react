@@ -8,16 +8,16 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col item social">
-              <a href="https://stackoverflow.com/users/8045609/yannick?tab=profile">
+              <a href="https://stackoverflow.com/users/8045609/yannick?tab=profile" aria-label="Stack Overflow">
               <i className="fab fa-stack-overflow"></i>
               </a>
-              <a href="https://twitter.com/DJ_Yanic/">
+              <a href="https://twitter.com/DJ_Yanic/" aria-label="Twitter">
               <i className="fab fa-twitter"></i>
               </a>
-              <a href="https://github.com/YannickLeRoux">
+              <a href="https://github.com/YannickLeRoux" aria-label="Git Hub">
               <i className="fab fa-github"></i>
               </a>
-              <a href="https://www.linkedin.com/in/yannick-le-roux/">
+              <a href="https://www.linkedin.com/in/yannick-le-roux/" aria-label="LinkedIn">
               <i className="fab fa-linkedin"></i>
               </a>
             </div>

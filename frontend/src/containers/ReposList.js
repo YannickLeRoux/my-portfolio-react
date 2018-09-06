@@ -43,7 +43,6 @@ class ReposList extends Component {
               { data.user.repositories.edges.map((repo) => {
           return (
             <RepoListItem
-              key= { repo.node.id }
               name={ repo.node.name }
               link={ repo.node.url }
               desc={ repo.node.description }
