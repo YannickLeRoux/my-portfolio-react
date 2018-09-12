@@ -1,7 +1,29 @@
+@font-face {
+  font-family: "Roboto Condensed";
+  src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url("./assets/fonts/RobotoCondensed-Regular.woff") format("woff"); /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+
+  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url("./assets/fonts/RobotoCondensed-Bold.woff") format("woff"); /* Modern Browsers */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+
+  src: local('Roboto Condensed Light'), local('RobotoCondensed-Light'), url("./assets/fonts/RobotoCondensed-Light.woff") format("woff"); /* Modern Browsers */
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
 }
-

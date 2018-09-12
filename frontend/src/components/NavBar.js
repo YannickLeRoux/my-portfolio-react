@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/Navigation-Clean.css';
 
 import {
@@ -30,7 +32,7 @@ class NavBar extends Component {
           <div className="container">
             <Link className="navbar-brand" to='/'>Yannick Le Roux </Link>
             <span id="tagline" className="navbar-brand">
-              <i className="fa fa-laptop" style={{color: 'white'}} />
+              <FontAwesomeIcon icon={faLaptopCode} style={{color: 'white'}}/>
               <small>  Developer in the making</small>
             </span>
             <NavbarToggler onClick={this.toggle} />

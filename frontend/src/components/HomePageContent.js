@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 class HomePageContent extends Component {
   render() {
@@ -26,10 +27,10 @@ class HomePageContent extends Component {
         <p>Self taught, I had fun building this website with: </p>
         <div className="center-list">
         <ul className="list-group tech-stack">
-          <li className="list-group-item"><strong>React JS </strong><i className="fas fa-arrow-right"></i> Components Based UI</li>
-          <li className="list-group-item"><strong>Redux </strong><i className="fas fa-arrow-right"></i> Manage The App Global State, Store The Blog Posts</li>
-          <li className="list-group-item"><strong>Apollo/GraphQL </strong><i className="fas fa-arrow-right"></i> Fetch A List Of Repositories From GitHub GraphQL Api</li>
-          <li className="list-group-item"><strong>Django </strong><i className="fas fa-arrow-right"></i> Create Blog Post Model And A RESTful Api</li>
+          <li className="list-group-item"><strong>React JS </strong><FontAwesomeIcon icon={faArrowRight} /> Components Based UI</li>
+          <li className="list-group-item"><strong>Redux </strong><FontAwesomeIcon icon={faArrowRight} /> Manage The App Global State, Store The Blog Posts</li>
+          <li className="list-group-item"><strong>Apollo/GraphQL </strong><FontAwesomeIcon icon={faArrowRight} /> Fetch A List Of Repositories From GitHub GraphQL Api</li>
+          <li className="list-group-item"><strong>Django </strong><FontAwesomeIcon icon={faArrowRight} /> Create Blog Post Model And A RESTful Api</li>
         </ul>
         </div>
         <p>Here is the <a target="_blank" rel="noopener noreferrer" href="https://github.com/YannickLeRoux/my-portfolio-react/tree/master/frontend">source code</a>.</p>

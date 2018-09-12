@@ -10,8 +10,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23484726-5"></script>
@@ -21,6 +20,13 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-23484726-5');
+    </script>
+
+    <script src="https://cdn.ravenjs.com/3.26.4/raven.min.js"
+    crossorigin="anonymous"></script>
+
+    <script>
+      Raven.config('https://970ba8454e024ff998b2d720405ccee7@sentry.io/1278955').install()
     </script>
 
     <!--

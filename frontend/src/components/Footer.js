@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faTwitter, faStackOverflow, faGithub } from '@fortawesome/free-brands-svg-icons';
 import '../assets/css/Footer-Dark.css';
 
 const Footer = () => {
@@ -9,16 +11,16 @@ const Footer = () => {
           <div className="row">
             <div className="col item social">
               <a href="https://stackoverflow.com/users/8045609/yannick?tab=profile" aria-label="Stack Overflow">
-              <i className="fab fa-stack-overflow"></i>
+              <FontAwesomeIcon icon={faStackOverflow} />
               </a>
               <a href="https://twitter.com/DJ_Yanic/" aria-label="Twitter">
-              <i className="fab fa-twitter"></i>
+              <FontAwesomeIcon icon={faTwitter} />
               </a>
               <a href="https://github.com/YannickLeRoux" aria-label="Git Hub">
-              <i className="fab fa-github"></i>
+              <FontAwesomeIcon icon={faGithub} />
               </a>
               <a href="https://www.linkedin.com/in/yannick-le-roux/" aria-label="LinkedIn">
-              <i className="fab fa-linkedin"></i>
+              <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </div>
           </div>

@@ -115,3 +115,5 @@ secret.sh
 .env
 
 .vscode/
+
+build/
