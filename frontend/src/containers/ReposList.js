@@ -4,9 +4,6 @@ import gql from 'graphql-tag';
 
 import Spinner from '../components/Spinner';
 
-import PropType from 'prop-types';
-
-
 import RepoListItem from '../components/RepoListItem';
 
 const GET_REPOS = gql`
@@ -43,6 +40,7 @@ class ReposList extends Component {
               { data.user.repositories.edges.map((repo) => {
           return (
             <RepoListItem
+              key={ repo.node.url }
               name={ repo.node.name }
               link={ repo.node.url }
               desc={ repo.node.description }

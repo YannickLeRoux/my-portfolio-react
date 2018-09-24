@@ -7,7 +7,7 @@ class HomePageContent extends Component {
   render() {
     return(
       <Container className="mb-5 text-center text-container" style= {{marginTop: '50px'}}>
-        <h1>Welcome to my portfolio</h1>
+        <h1>Welcome To My Portfolio</h1>
         <h2 className="mt-5">My name is Yannick Le Roux, <br /><strong>Software</strong> and <strong>Web</strong> developer <em>in the making</em>.</h2>
         <Row className="tech-stack">
           <Col md="3">
@@ -24,13 +24,13 @@ class HomePageContent extends Component {
           </Col>
         </Row>
 
-        <p>Self taught, I had fun building this website with: </p>
+        <h2>Self taught, I had fun building this website with: </h2>
         <div className="center-list">
-        <ul className="list-group tech-stack">
+        <ul className="list-group tech-stack--list">
           <li className="list-group-item"><strong>React JS </strong><FontAwesomeIcon icon={faArrowRight} /> Components Based UI</li>
           <li className="list-group-item"><strong>Redux </strong><FontAwesomeIcon icon={faArrowRight} /> Manage The App Global State, Store The Blog Posts</li>
           <li className="list-group-item"><strong>Apollo/GraphQL </strong><FontAwesomeIcon icon={faArrowRight} /> Fetch A List Of Repositories From GitHub GraphQL Api</li>
-          <li className="list-group-item"><strong>Django </strong><FontAwesomeIcon icon={faArrowRight} /> Create Blog Post Model And A RESTful Api</li>
+          <li className="list-group-item"><strong>Django </strong><FontAwesomeIcon icon={faArrowRight} /> Create Blog Post Model And RESTful Api</li>
         </ul>
         </div>
         <p>Here is the <a target="_blank" rel="noopener noreferrer" href="https://github.com/YannickLeRoux/my-portfolio-react/tree/master/frontend">source code</a>.</p>

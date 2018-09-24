@@ -116,4 +116,7 @@ secret.sh
 
 .vscode/
 
-build/
+frontend/build/
+
+frontend/node_modules/
+

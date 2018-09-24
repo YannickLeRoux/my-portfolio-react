@@ -6,7 +6,7 @@ import github from '../assets/img/GitHub-Mark-64px.png';
 const RepoListItem = ({ name, link, desc }) => {
   return (
     <React.Fragment key={name}>
-      <li className="list-group-item repolistitem" key={name}>
+      <li className="list-group-item repolistitem">
         <div className="row">
           <div className="col-md-2">
             <img src={ github }

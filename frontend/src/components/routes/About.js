@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Overdrive from 'react-overdrive';
 import { Container } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft,faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import clockJS from '../../assets/js/clock';
 
 class About extends Component {
@@ -22,7 +24,7 @@ class About extends Component {
               </blockquote>
             </div>
             <Overdrive id="main-focus" duration={500}>
-            <h1>My Objective</h1></Overdrive><h2> Get a first developer job in 2018.</h2>
+            <h1>My Objective</h1></Overdrive><h2> Junior Web Developer - REACT JS</h2>
           </div>
           <hr/>
 
@@ -50,7 +52,7 @@ class About extends Component {
                 <div className="hand second-hand"></div>
               </div>
             </div>
-            <h4 className="text-center mb-5"><i className="fa fa-quote-left"></i> Time to get my first developer job :) ! <i className="fa fa-quote-right"></i></h4>
+            <h2 className="text-center mb-5"><FontAwesomeIcon icon={faQuoteLeft} />  Time to get my first developer job!  <FontAwesomeIcon icon={faQuoteRight} /></h2>
 
 
             <p>The first personal projects I undertook were driven by the idea of making my current job (DJ) easier.
