@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faTwitter, faStackOverflow, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faTwitter, faStackOverflow, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import '../assets/css/Footer-Dark.css';
 
 const Footer = () => {
@@ -21,6 +21,9 @@ const Footer = () => {
               </a>
               <a href="https://www.linkedin.com/in/yannick-le-roux/" aria-label="LinkedIn">
               <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+              <a href="https://codepen.io/YannickLeRoux/" aria-label="CodePen">
+              <FontAwesomeIcon icon={faCodepen} />
               </a>
             </div>
           </div>
