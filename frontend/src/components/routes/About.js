@@ -3,6 +3,7 @@ import Overdrive from 'react-overdrive';
 import { Container } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft,faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import Button from '../Button';
 import clockJS from '../../assets/js/clock';
 
 class About extends Component {
@@ -29,7 +30,11 @@ class About extends Component {
           <hr/>
 
           <div className="my-5">
-            <div className="text-center"><a href="http://yannick-dev.com/static/files/Resume-v10.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-lg hero-button anim-button mb-4" id="download" >Download my Resume</a></div>
+            <div className="text-center">
+              <a href="http://yannick-dev.com/static/files/Resume-v10.pdf">
+                <Button>Download my Resume</Button>
+              </a>
+            </div>
 
             <br/>
             <p>After working for ten years as a <strong>sound engineer</strong> and <strong>DJ</strong> in the music industry, I felt a desire to <strong>switch career</strong> early 2017.<br/>
