@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LazyHero from 'react-lazy-hero';
-import { Button } from 'reactstrap';
+import Button from './Button';
 import { Link } from 'react-router-dom';
 import '../assets/css/Paralax-Hero-Banner.css';
 
@@ -35,8 +35,7 @@ Good programmers write code that humans can understand.<i className="fa fa-quote
                     <p style={{ color: 'white' }}> - Martin Fowler</p>
                     </div>
                     <Link to="/about">
-                    <Button className="btn btn-primary btn-lg hero-button anim-button" color="primary">Learn About Me
-                    </Button>
+                      <Button>Learn About Me</Button>
                     </Link>
               </LazyHero>
 

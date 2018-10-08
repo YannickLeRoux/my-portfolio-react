@@ -171,32 +171,6 @@ blockquote p {
 	}
 }
 
-.btn-primary {
-	background-color: var(--themeblue);
-	border-color: var(--satblue);
-	border-radius: 0px;
-	font-family: 'Roboto Condensed', sans-serif;
-  padding: 10px 30px;
-}
-
-.btn-primary:hover {
-	background-color: var(--hoverlinks);
-	border-color: var(--lightgreen);
-}
-
-
-.anim-button {
-	animation-name: expandOpen;
-	-webkit-animation-name: expandOpen;
-
-	animation-duration: 1.2s;
-	-webkit-animation-duration: 1.2s;
-
-	animation-timing-function: ease-out;
-	-webkit-animation-timing-function: ease-out;
-
-	visibility: visible !important
-}
 @keyframes expandOpen {
 	0% {
 		transform: scale(1.8);
