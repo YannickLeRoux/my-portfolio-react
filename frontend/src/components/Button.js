@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const StyledButton = styled.button`
   color: #ffffff ;
