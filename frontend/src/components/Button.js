@@ -26,6 +26,7 @@ const StyledButton = styled.button`
     background-color: #59c3c3;
     border-color: #99DDC8;
     box-shadow:0 0 0 5px rgba(0,0,0,0.4) inset;
+    text-shadow: 0 1px rgba(0,0,0,0.4);
 
   }
 
