@@ -19,11 +19,13 @@ const StyledButton = styled.button`
 	animation-timing-function: ease-out;
 	-webkit-animation-timing-function: ease-out;
 
-	visibility: visible !important;
+  visibility: visible !important;
+  transition:all 0.8s, color 0.3s 0.3s;
 
   &:hover {
     background-color: #59c3c3;
-	  border-color: #99DDC8;
+    border-color: #99DDC8;
+    box-shadow:0 0 0 5px rgba(0,0,0,0.4) inset;
 
   }
 
