@@ -37,7 +37,7 @@ class About extends Component {
             </div>
 
             <br/>
-            <p>After working for ten years as a <strong>sound engineer</strong> and <strong>DJ</strong> in the music industry, I felt a desire to <strong>switch career</strong> early 2017.<br/>
+            <p className="mt-3">After working for ten years as a <strong>sound engineer</strong> and <strong>DJ</strong> in the music industry, I felt a desire to <strong>switch career</strong> early 2017.<br/>
 
 			I remembered that as a kid and then a teenager, I loved to create small scripts on my Atari STE, or even hack into some games. I just didn't know at that time if I had what it would take to, one day, become a <strong>professional developer</strong>.</p>
 

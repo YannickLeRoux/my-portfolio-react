@@ -122,6 +122,7 @@ blockquote:after {
 }
 blockquote p {
 	padding:20px;
+	margin: 0;
 }
 
 .home-title-container {
