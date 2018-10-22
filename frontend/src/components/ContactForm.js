@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FormInput from './FormInput';
+import Button from './Button';
 
 const encode = (data) => {
   return Object.keys(data)
@@ -55,7 +56,7 @@ class ContactForm extends Component {
           <textarea onChange={this.handleChange} className="form-control" id="message" name="message" value={message}></textarea>
         </p>
         <p className="form-group">
-          <button className="btn btn-primary btn-lg hero-button"type="submit">Send</button>
+          <Button type="submit">Send</Button>
         </p>
       </form>
 
