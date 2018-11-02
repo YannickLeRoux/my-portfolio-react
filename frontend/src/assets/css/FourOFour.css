@@ -1,0 +1,59 @@
+.nopage {
+  position: relative;
+  width: 100vw;
+}
+
+.nopage-img {
+  opacity: 0.8;;
+  width: 100%;
+  object-fit: contain;
+  margin-top: -20px;
+}
+
+.nopage-title {
+  opacity: 0.7;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+
+}
+
+.nopage-styleO {
+  opacity: 1;
+  position: relative;
+  color: white;
+}
+.nopage-styleO::before {
+  position: absolute;
+  content: "4";
+  top: -85px;
+}
+
+.nopage-styleO::after {
+  position: absolute;
+  content: "4";
+  top: 85px;
+  left: 2px;
+}
+
+@media screen and (max-width: 600px) {
+  .nopage-title {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 2.5em;
+  }
+
+  .nopage-styleO::before {
+    position: absolute;
+    content: "4";
+    top: -40px;
+  }
+
+  .nopage-styleO::after {
+    position: absolute;
+    content: "4";
+    top: 40px;
+    left: 2px;
+  }
+}

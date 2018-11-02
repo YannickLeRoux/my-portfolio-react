@@ -6,6 +6,7 @@ import {
     Portfolio,
     Blog,
     Contact,
+    FourOFour
 } from './routes';
 
 import BlogPost from '../components/BlogPost';
@@ -15,13 +16,14 @@ const Main = () => {
     <main>
 
       <Switch>
+        <Route activeClassName="" exact  path="/" component={Home} />
         <Route activeClassName="active" path="/about" component={About}/>
         <Route activeClassName="active" path="/portfolio" component={Portfolio} />
         <Route path="/blog/:slug"
           render={(props) => <BlogPost {...this.props} {...props} />}/>
         <Route activeClassName="active" path="/blog" component={Blog} />
         <Route activeClassName="active" path="/contact" component={Contact} />
-        <Route activeClassName="" path="/" component={Home} />
+        <Route component={FourOFour} />
       </Switch>
     </main>
   );
