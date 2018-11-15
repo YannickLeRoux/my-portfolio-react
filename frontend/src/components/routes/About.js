@@ -25,7 +25,7 @@ class About extends Component {
               </blockquote>
             </div>
             <Overdrive id="main-focus" duration={500}>
-            <h1>My Objective</h1></Overdrive><h2> Junior Web Developer - REACT JS</h2>
+            <h1 style={{ marginTop: '.5em' }}>My Objective</h1></Overdrive><h2> Junior Web Developer - REACT JS</h2>
           </div>
           <hr/>
 

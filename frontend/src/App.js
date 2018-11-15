@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import reducers from './reducers';
 import promise from 'redux-promise';
-
 import { BrowserRouter } from 'react-router-dom';
+
+import reducers from './reducers';
+
 import './App.css';
 import myScript from './assets/js/myscript';
 

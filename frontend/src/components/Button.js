@@ -11,7 +11,8 @@ const StyledButton = styled.button`
   padding: 10px 30px;
   cursor: pointer;
   animation-name: ${expandOpen};
-	-webkit-animation-name: expandOpen;
+  -webkit-animation-name: expandOpen;
+  text-shadow: 0 -1px rgba(0,0,0,0.4);
 
 	animation-duration: 1.2s;
 	-webkit-animation-duration: 1.2s;
