@@ -1,5 +1,7 @@
 .navigation-clean {
   background:#fff;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-denim-3.png");
+  /*background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");*/
 	position: fixed;
 	top: 0px;
 	width: 100%;
@@ -69,6 +71,7 @@
   padding-right:18px;
   color:#ffffff;
   text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+  -webkit-text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
 	transition: all 0.3s ease-in-out;
 }
 

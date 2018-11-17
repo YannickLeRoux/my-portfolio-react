@@ -48,18 +48,29 @@
     "typescript": "^3.1.4",
     "url-parse": "^1.4.3"
   },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-react": "^7.9.1",
-    "react-test-renderer": "^16.4.1"
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-enzyme": "^7.0.1",
+    "react-test-renderer": "^16.6.3"
   },
   "browserslist": [
     ">0.2%",
