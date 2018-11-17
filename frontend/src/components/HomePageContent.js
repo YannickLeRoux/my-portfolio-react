@@ -14,13 +14,13 @@ class HomePageContent extends Component {
             <img className="tech-stack--image" src={require('../assets/img/256px-React-icon.png')} alt="react logo" />
           </Col>
           <Col md="3">
-            <img className="tech-stack--image" src={require('../assets/img/python-django-150x150.png')} alt="django logo" />
-          </Col>
-          <Col md="3">
             <img className="tech-stack--image" src={require('../assets/img/redux-logo.png')} alt="redux logo" />
           </Col>
           <Col md="3">
             <img className="tech-stack--image" src={require('../assets/img/graphql.png')} alt="graphql logo" />
+          </Col>
+          <Col md="3">
+            <img className="tech-stack--image" src={require('../assets/img/python-django-150x150.png')} alt="django logo" />
           </Col>
         </Row>
 
