@@ -23,9 +23,7 @@ class Hero extends Component {
         return (
           <section>
             <LazyHero
-            // className="hero"
-            imageSrc='https://images.unsplash.com/photo-1530569673472-307dc017a82d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f9eeece2e75190a34dfc04fe751bf4ba&auto=format&fit=crop&w=668&q=80'
-            color='rgb(255,42,5)'
+            imageSrc='https://images.unsplash.com/photo-1541075217473-93119871682d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5e2eb08253df1eb24e6527cbc169440d&auto=format&fit=crop&w=2000&q=80'
             opacity={0.2}
             minHeight='60vh'
             parallaxOffset={100}
@@ -38,7 +36,7 @@ class Hero extends Component {
                     Good programmers write code that humans can understand.
                     <FontAwesomeIcon icon={faQuoteRight} style={{ marginLeft: 20}}  size='xs'/>
                     </h1>
-                    <p style={{ color: 'white' }}> - Martin Fowler</p>
+                    <p style={{ color: '#282D32' }}> - Martin Fowler</p>
                     </div>
                     <Link to="/about">
                       <Button>Learn About Me</Button>
