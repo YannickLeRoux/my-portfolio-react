@@ -7,8 +7,9 @@ class HomePageContent extends Component {
   render() {
     return(
       <Container className="mb-5 text-center text-container" style= {{marginTop: '50px'}}>
-        <h1>Welcome To My Portfolio</h1>
-        <h2 className="mt-5">My name is Yannick Le Roux, <br /><strong>Software</strong> and <strong>Web</strong> developer <em>in the making</em>.</h2>
+        <h1>Yannick Le Roux</h1>
+        <h2 className="mt-5"><strong>Web</strong> and <strong>Mobile App</strong> developer in the making.</h2>
+        <hr />
         <Row className="tech-stack">
           <Col md="3">
             <img className="tech-stack--image" src={require('../assets/img/256px-React-icon.png')} alt="react logo" />
