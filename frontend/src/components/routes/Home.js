@@ -4,7 +4,7 @@ import Hero from '../Hero';
 import HomePageContent from '../HomePageContent';
 
 const Home = () => {
-  return(
+  return (
     <React.Fragment>
       <Hero />
       <HomePageContent />
