@@ -36,7 +36,6 @@ class App extends Component {
               appId="442917462905862"
               themeColor="#127ea5"
               loggedInGreeting="Hi! This is Yannick. How are you doing today?"
-              loggedOutGreeting="Bye! Have a nice day."
             />
             <NavBar />
             <Main />
