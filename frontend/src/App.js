@@ -14,7 +14,6 @@ import myScript from './assets/js/myscript';
 import NavBar from './components/NavBar';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import ChatBot from './components/ChatBot';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -36,6 +35,8 @@ class App extends Component {
               pageId="320257491917941"
               appId="442917462905862"
               themeColor="#127ea5"
+              loggedInGreeting="Hi! This is Yannick. How are you doing today?"
+              loggedOutGreeting="Bye! Have a nice day."
             />
             <NavBar />
             <Main />
