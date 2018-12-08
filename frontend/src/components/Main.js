@@ -11,15 +11,17 @@ import {
 
 import BlogPost from '../components/BlogPost';
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main>
 
       <Switch>
         <Route activeClassName="active" path="/about" exact component={About}/>
         <Route activeClassName="active" path="/portfolio" exact component={Portfolio} />
-        <Route path="/blog/:slug"
-          render={(props) => <BlogPost {...this.props} {...props} />}/>
+        <Route
+          path="/blog/:slug"
+          render={props => <BlogPost {...props} />}
+        />
         <Route activeClassName="active" path="/blog" exact component={Blog} />
         <Route activeClassName="active" path="/contact" exact component={Contact} />
         <Route activeClassName="" path="/" exact component={Home} />

@@ -35,7 +35,10 @@ class App extends Component {
               pageId="320257491917941"
               appId="442917462905862"
               themeColor="#127ea5"
-              loggedInGreeting="Hi! This is Yannick. How are you doing today?"
+              shouldShowDialog
+              debug
+              loggedInGreeting="Hi this is Yannick! How are you doing today?"
+              loggedOutGreeting="Hi this is Yannick! I am here to answer any question you may have."
             />
             <NavBar />
             <Main />
