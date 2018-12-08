@@ -11,7 +11,7 @@ import {
 
 import BlogPost from '../components/BlogPost';
 
-const Main = (props) => {
+const Main = () => {
   return (
     <main>
 
