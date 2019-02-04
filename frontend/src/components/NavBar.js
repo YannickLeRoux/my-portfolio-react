@@ -1,17 +1,18 @@
+// @flow
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import '../assets/css/Navigation-Clean.css';
 
-import {
-  Collapse,
-  NavbarToggler,
-  Nav,
-  NavItem,
-   } from 'reactstrap';
+import { Collapse, NavbarToggler, Nav, NavItem } from 'reactstrap';
 
-class NavBar extends Component {
+type Props = {};
+type State = {
+  isOpen: boolean
+};
+
+class NavBar extends Component<Props, State> {
   constructor(props) {
     super(props);
 
@@ -30,34 +31,41 @@ class NavBar extends Component {
       <header>
         <nav className="navbar navbar-light navbar-expand-md navigation-clean">
           <div className="container">
-            <Link className="navbar-brand" to='/'>Yannick Le Roux </Link>
+            <Link className="navbar-brand" to="/">
+              Yannick Le Roux{' '}
+            </Link>
             <span id="tagline" className="navbar-brand">
-              <FontAwesomeIcon icon={faLaptopCode} style={{color: 'white'}}/>
-              <small>  Developer in the making</small>
+              <FontAwesomeIcon icon={faLaptopCode} style={{ color: 'white' }} />
+              <small> Developer in the making</small>
             </span>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="nav navbar-nav ml-auto" navbar>
-
                 <NavItem>
-                  <NavLink className="nav-link" to='/about'>About me</NavLink>
+                  <NavLink className="nav-link" to="/about">
+                    About me
+                  </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to='/portfolio'>Portfolio</NavLink>
+                  <NavLink className="nav-link" to="/portfolio">
+                    Portfolio
+                  </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to='/blog'>Blog</NavLink>
+                  <NavLink className="nav-link" to="/blog">
+                    Blog
+                  </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to='/contact'>Hire Me</NavLink>
+                  <NavLink className="nav-link" to="/contact">
+                    Hire Me
+                  </NavLink>
                 </NavItem>
-
               </Nav>
             </Collapse>
           </div>
         </nav>
       </header>
-
     );
   }
 }

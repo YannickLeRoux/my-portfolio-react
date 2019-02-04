@@ -59,7 +59,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",
@@ -69,8 +70,10 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-react": "^7.9.1",
-    "jest": "^23.6.0",
-    "jest-cli": "^23.6.0",
+    "flow-bin": "^0.92.0",
+    "flow-typed": "^2.5.1",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
     "jest-enzyme": "^7.0.1",
     "react-test-renderer": "^16.6.3"
   },
