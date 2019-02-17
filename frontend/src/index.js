@@ -14,7 +14,7 @@ import registerServiceWorker from './registerServiceWorker';
 const API = 'https://api.github.com/graphql';
 
 const httpLink = createHttpLink({
-  uri: API,
+  uri: API
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -24,7 +24,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : ''
     }
   };
 });
@@ -38,5 +38,6 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <App />
   </ApolloProvider>,
-  document.getElementById('root'));
+  document.getElementById('root')
+);
 registerServiceWorker();

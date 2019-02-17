@@ -32,14 +32,6 @@ class Hero extends Component {
           style={{ padding: '-15px' }}
         >
           <div className="home-title-container">
-            {/* <h1 className="homepage-title">
-                    <FontAwesomeIcon icon={faQuoteLeft} style={{ marginRight: 20}} size='xs'/>
-                    Any fool can write code that a computer can understand.
-                    Good programmers write code that humans can understand.
-                    <FontAwesomeIcon icon={faQuoteRight} style={{ marginLeft: 20}}  size='xs'/>
-                    </h1>,
-                    <p style={{ color: '#282D32' }}> - Martin Fowler</p>
-                    ]}> */}
             <FontAwesomeIcon icon={faQuoteLeft} style={{ marginRight: 20 }} size="1x" />
             <Typed
               className="homepage-title"

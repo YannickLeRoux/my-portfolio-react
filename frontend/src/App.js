@@ -18,14 +18,10 @@ import Footer from './components/Footer';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 class App extends Component {
-
-
   componentDidMount() {
     myScript();
     // code a corriger herojs();
-
   }
-
   render() {
     return (
       <Provider store={createStoreWithMiddleware(reducers)}>
