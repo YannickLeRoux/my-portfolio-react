@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useLayoutEffect } from 'react';
 
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -17,33 +17,31 @@ import Footer from './components/Footer';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
-class App extends Component {
-  componentDidMount() {
+const App = () => {
+  useLayoutEffect(() => {
     myScript();
     // code a corriger herojs();
-  }
-  render() {
-    return (
-      <Provider store={createStoreWithMiddleware(reducers)}>
-        <BrowserRouter>
-          <div className="App">
-            <MessengerCustomerChat
-              pageId="320257491917941"
-              appId="442917462905862"
-              themeColor="#127ea5"
-              shouldShowDialog
-              debug
-              loggedInGreeting="Hi this is Yannick! How are you doing today?"
-              loggedOutGreeting="Hi this is Yannick! I am here to answer any question you may have."
-            />
-            <NavBar />
-            <Main />
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </Provider>
-    );
-  }
-}
+  }, [myScript]);
+  return (
+    <Provider store={createStoreWithMiddleware(reducers)}>
+      <BrowserRouter>
+        <div className="App">
+          <MessengerCustomerChat
+            pageId="320257491917941"
+            appId="442917462905862"
+            themeColor="#127ea5"
+            shouldShowDialog
+            debug
+            loggedInGreeting="Hi this is Yannick! How are you doing today?"
+            loggedOutGreeting="Hi this is Yannick! I am here to answer any question you may have."
+          />
+          <NavBar />
+          <Main />
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </Provider>
+  );
+};
 
 export default App;
