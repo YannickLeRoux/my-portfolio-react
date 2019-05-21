@@ -20,7 +20,6 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 const App = () => {
   useLayoutEffect(() => {
     myScript();
-    // code a corriger herojs();
   }, [myScript]);
   return (
     <Provider store={createStoreWithMiddleware(reducers)}>

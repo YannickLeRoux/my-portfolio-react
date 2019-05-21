@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useLayoutEffect, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -9,76 +9,61 @@ import Spinner from './Spinner';
 import '../assets/css/Blog.css';
 import '../assets/css/prism.css';
 
+const BlogPost = props => {
+  const { fetchSinglePost, match, post } = props;
 
-class BlogPost extends Component {
+  useLayoutEffect(() => {
+    fetchSinglePost(match.params.slug);
+  }, []);
 
-  componentWillMount() {
-    this.props.fetchSinglePost(this.props.match.params.slug);
-  }
-
-  componentDidMount() {
-   Prism.highlightAll();
-  }
-
-  componentDidUpdate() {
+  useEffect(() => {
     Prism.highlightAll();
-  }
+    return () => Prism.highlightAll();
+  });
 
+  const formatDate = date => {
+    const dateToFormat = new Date(date);
 
-  formatDate(date) {
-    const dateToFormat = new Date(date)
-
-    return (
-      new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'long',
       day: '2-digit'
-  }).format(dateToFormat)
-    );
+    }).format(dateToFormat);
+  };
+
+  if (!post) {
+    return <Spinner />;
   }
 
+  return (
+    <div className="blog">
+      <div className="blog-post">
+        <div className="container">
+          <h2 className="blog-post--title">{post.title}</h2>
+          <h6 className="blog-post--category text-muted">Category: {post.category}</h6>
+          <h6 className="blog-post--date text-muted">Published: {formatDate(post.published_date)}</h6>
+        </div>
+        <div className="container">
+          <hr />
 
-  render() {
-    const { post } = this.props;
-
-
-
-    if (!post) {
-      return <Spinner />
-    }
-
-    return (
-
-      <div className="blog">
-        <div className="blog-post">
-          <div className="container">
-            <h2 className="blog-post--title">{post.title}</h2>
-            <h6 className="blog-post--category text-muted">Category: { post.category}</h6>
-            <h6 className="blog-post--date text-muted">Published: { this.formatDate(post.published_date) }</h6>
-          </div>
-          <div className="container">
-            <hr />
-
-            <div>
-              <div className="blog-post--content">
-                <ReactMarkdown source={post.text} />
-              </div>
-
+          <div>
+            <div className="blog-post--content">
+              <ReactMarkdown source={post.text} />
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ fetchSinglePost }, dispatch);
+};
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ fetchSinglePost }, dispatch)
-}
+const mapStateToProps = state => ({ post: state.posts.current });
 
-function mapStateToProps(state) {
-  return { post: state.posts.current }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(BlogPost);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BlogPost);
