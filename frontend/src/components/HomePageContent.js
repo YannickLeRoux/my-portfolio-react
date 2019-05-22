@@ -7,7 +7,7 @@ const HomePageContent = () => (
   <Container className="mb-5 text-center text-container" style={{ marginTop: '50px' }}>
     <h1>Yannick Le Roux</h1>
     <h2 className="mt-5">
-      <strong>Web</strong> and <strong>Mobile App</strong> developer in the making.
+      <strong>Web</strong> and <strong>Mobile App</strong> developer.
     </h2>
     <hr />
     <Row className="tech-stack">

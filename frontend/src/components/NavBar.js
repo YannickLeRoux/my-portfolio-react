@@ -22,11 +22,16 @@ const NavBar = () => {
           </Link>
           <span id="tagline" className="navbar-brand">
             <FontAwesomeIcon icon={faLaptopCode} style={{ color: 'white' }} />
-            <small> Developer in the making</small>
+            <small>{'  '} Javascript & React Developer</small>
           </span>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="nav navbar-nav ml-auto" navbar>
+              <NavItem>
+                <NavLink className="nav-link" to="/">
+                  Home
+                </NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink className="nav-link" to="/about">
                   About me
@@ -40,6 +45,11 @@ const NavBar = () => {
               <NavItem>
                 <NavLink className="nav-link" to="/blog">
                   Blog
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="nav-link" to="/uses">
+                  I Use
                 </NavLink>
               </NavItem>
               <NavItem>
