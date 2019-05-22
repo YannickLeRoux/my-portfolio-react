@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
 
-const formatDate = (date) => {
+const formatDate = date => {
   const dateToFormat = new Date(date);
 
   return new Intl.DateTimeFormat('en-US', {
@@ -14,9 +14,7 @@ const formatDate = (date) => {
   }).format(dateToFormat);
 };
 
-const BlogPostsListItem = ({
-  title, author, category, date, slug, content
-}) => (
+const BlogPostsListItem = ({ title, author, category, date, slug, content }) => (
   <div className="blog-post">
     <div className="container">
       <Link to={`blog/${slug}`} className="blog-post--title">
@@ -30,7 +28,8 @@ const BlogPostsListItem = ({
 
       <div>
         <p className="blog-post--excerpt">
-          {content} <span>...</span>
+          {content.markdown}
+          <span>...</span>
         </p>
 
         <Link className="text-mute text-right" to={`blog/${slug}`}>

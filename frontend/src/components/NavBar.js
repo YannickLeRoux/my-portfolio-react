@@ -22,7 +22,7 @@ const NavBar = () => {
           </Link>
           <span id="tagline" className="navbar-brand">
             <FontAwesomeIcon icon={faLaptopCode} style={{ color: 'white' }} />
-            <small> Developer in the making</small>
+            <small>React & Node Developer</small>
           </span>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

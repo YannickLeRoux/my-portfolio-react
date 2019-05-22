@@ -39,7 +39,7 @@ const Blog = () => {
           <Overdrive id="main-focus" duration={500}>
             <h1 style={{ marginLeft: '65px' }}>Blog Posts</h1>
           </Overdrive>
-          <BlogPostsList />
+          <BlogPostsList client={client} />
         </div>
       </React.Fragment>
     </ApolloProvider>
