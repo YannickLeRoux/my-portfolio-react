@@ -14,10 +14,10 @@ const formatDate = date => {
   }).format(dateToFormat);
 };
 
-const BlogPostsListItem = ({ title, author, category, date, slug, content }) => (
+const BlogPostsListItem = ({ id, title, author, category, date, slug, content }) => (
   <div className="blog-post">
     <div className="container">
-      <Link to={`blog/${slug}`} className="blog-post--title">
+      <Link to={`blog/${id}`} className="blog-post--title">
         <h2>{title}</h2>
       </Link>
       <h6 className="blog-post--category">Category: {category}</h6>

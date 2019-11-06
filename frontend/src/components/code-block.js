@@ -1,47 +1,27 @@
-const React = require('react')
-const PropTypes = require('prop-types')
-const hljs = window.hljs
 
-class CodeBlock extends React.PureComponent {
-  constructor(props) {
-    super(props)
-    this.setRef = this.setRef.bind(this)
-  }
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { coy } from "react-syntax-highlighter/dist/styles/prism";
 
-  setRef(el) {
-    this.codeEl = el
-  }
+class CodeBlock extends PureComponent {
+  static propTypes = {
+    value: PropTypes.string.isRequired,
+    language: PropTypes.string
+  };
 
-  componentDidMount() {
-    this.highlightCode()
-  }
-
-  componentDidUpdate() {
-    this.highlightCode()
-  }
-
-  highlightCode() {
-    hljs.highlightBlock(this.codeEl)
-  }
+  static defaultProps = {
+    language: null
+  };
 
   render() {
+    const { language, value } = this.props;
     return (
-      <pre>
-        <code ref={this.setRef} className={`language-${this.props.language}`}>
-          {this.props.value}
-        </code>
-      </pre>
-    )
+      <SyntaxHighlighter language={language} style={coy}>
+        {value}
+      </SyntaxHighlighter>
+    );
   }
 }
 
-CodeBlock.defaultProps = {
-  language: ''
-}
-
-CodeBlock.propTypes = {
-  value: PropTypes.string.isRequired,
-  language: PropTypes.string
-}
-
-module.exports = CodeBlock
+export default CodeBlock;

@@ -18,6 +18,7 @@ const BlogPostsList = ({ data: { loading, error, posts, postsConnection, network
           {posts.map(post => (
             <BlogPostsListItem
               key={post.id}
+              id={post.id}
               title={post.title}
               author={post.author}
               category={post.category}

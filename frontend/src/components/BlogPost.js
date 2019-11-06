@@ -4,15 +4,17 @@ import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 import Prism from 'prismjs';
 import Spinner from './Spinner';
+import CodeBlock from './code-block';
 
 import '../assets/css/Blog.css';
-import '../assets/css/prism.css';
+// import '../assets/css/prism.css';
 
 const BlogPost = ({ data: { loading, error, post } }) => {
-  useEffect(() => {
-    Prism.highlightAll();
-    return () => Prism.highlightAll();
-  });
+  console.log(error);
+  // useEffect(() => {
+  //   Prism.highlightAll();
+  //   return () => Prism.highlightAll();
+  // }, []);
 
   const formatDate = date => {
     const dateToFormat = new Date(date);
@@ -24,7 +26,7 @@ const BlogPost = ({ data: { loading, error, post } }) => {
     }).format(dateToFormat);
   };
 
-  if (error) return <em>Error fetching the post!</em>;
+  if (error) return <em>Error fetching the post! </em>;
   if (!loading) {
     return (
       <article className="blog">
@@ -39,7 +41,7 @@ const BlogPost = ({ data: { loading, error, post } }) => {
 
             <div>
               <div className="blog-post--content">
-                <ReactMarkdown source={post.content.markdown} />
+                <ReactMarkdown source={post.content.markdown} renderers={{ code: CodeBlock }} />
               </div>
             </div>
           </div>
@@ -51,16 +53,15 @@ const BlogPost = ({ data: { loading, error, post } }) => {
 };
 
 export const singlePost = gql`
-  query singlePost($slug: String!) {
-    post(where: { slug: $slug }) {
+  query singlePost($id: ID!) {
+    post(where: { id: $id }) {
       id
       slug
       title
-      coverImage {
-        handle
+      createdAt
+      content {
+        markdown
       }
-      content
-      dateAndTime
     }
   }
 `;
@@ -68,7 +69,7 @@ export const singlePost = gql`
 export default graphql(singlePost, {
   options: ({ match }) => ({
     variables: {
-      slug: match.params.slug
+      id: match.params.slug
     }
   })
 })(BlogPost);
