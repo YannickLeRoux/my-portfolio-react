@@ -12,7 +12,7 @@ import Spinner from './Spinner';
 import '../assets/css/Blog.css';
 import '../assets/css/prism.css';
 
-const formatDate = (date) => {
+const formatDate = date => {
   const dateToFormat = new Date(date);
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -21,11 +21,11 @@ const formatDate = (date) => {
   }).format(dateToFormat);
 };
 
-const BlogPost = (props) => {
+const BlogPost = props => {
   const [state, dispatch] = useReducer(PostReducer, {});
 
   useEffect(() => {
-    dispatch({type: FETCH_SINGLE_POST , payload: props.match.params.slug);
+    dispatch({ type: FETCH_SINGLE_POST, payload: props.match.params.slug });
     Prism.highlightAll();
   });
 
@@ -39,7 +39,9 @@ const BlogPost = (props) => {
       <div className="blog-post">
         <div className="container">
           <h2 className="blog-post--title">{post.title}</h2>
-          <h6 className="blog-post--category text-muted">Category: {post.category}</h6>
+          <h6 className="blog-post--category text-muted">
+            Category: {post.category}
+          </h6>
           <h6 className="blog-post--date text-muted">
             Published: {formatDate(post.published_date)}
           </h6>
@@ -60,7 +62,4 @@ const BlogPost = (props) => {
 
 const mapStateToProps = state => ({ post: state.posts.current });
 
-export default connect(
-  mapStateToProps,
-  { fetchSinglePost }
-)(BlogPost);
+export default connect(mapStateToProps, { fetchSinglePost })(BlogPost);
