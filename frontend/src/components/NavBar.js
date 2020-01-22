@@ -28,6 +28,11 @@ const NavBar = () => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="nav navbar-nav ml-auto" navbar>
               <NavItem>
+                <NavLink className="nav-link" to="/">
+                  Home
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink className="nav-link" to="/about">
                   About me
                 </NavLink>
