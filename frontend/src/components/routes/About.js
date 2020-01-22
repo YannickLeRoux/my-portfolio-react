@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Overdrive from 'react-overdrive';
 import { Container } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuoteLeft, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Button';
 import clockJS from '../../assets/js/clock';
 
@@ -29,7 +27,7 @@ class About extends Component {
             <Overdrive id="main-focus" duration={500}>
               <h1 style={{ marginTop: '.5em' }}>Currently</h1>
             </Overdrive>
-            <h2> Junior React Developer @ EDF Renewable</h2>
+            <h2>Frontend / React Developer @ EDF Renewables, San Diego</h2>
           </div>
           <hr />
 
@@ -147,7 +145,7 @@ class About extends Component {
 
             <p>
               Currently, I continue to dive deeper into programming, improving my knowledge of the{' '}
-              <strong>React</strong> ecosystem...
+              <strong>React</strong> ecosystem, bringing TypeScript to the party...
             </p>
           </div>
         </Container>
