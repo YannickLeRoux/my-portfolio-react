@@ -1,8 +1,7 @@
-
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { coy } from "react-syntax-highlighter/dist/styles/prism";
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { coy } from 'react-syntax-highlighter/dist/styles/prism';
 
 class CodeBlock extends PureComponent {
   static propTypes = {
