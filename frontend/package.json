@@ -43,7 +43,7 @@
     "react-redux": "^7.0.7",
     "react-router-dom": "^5.1.0",
     "react-scripts": "3.3.0",
-    "react-syntax-highlighter": "^12.2.0",
+    "react-syntax-highlighter": "^12.2.1",
     "react-transition-group": "^4.3.0",
     "react-typed": "^1.1.0",
     "reactstrap": "^8.3.0",
