@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-scripts/config/webpack.config.js b/node_modules/react-scripts/config/webpack.config.js
+index d34d06f..b3c8cce 100644
+--- a/node_modules/react-scripts/config/webpack.config.js
++++ b/node_modules/react-scripts/config/webpack.config.js
+@@ -388,6 +388,11 @@ module.exports = function(webpackEnv) {
+             // "url" loader works like "file" loader except that it embeds assets
+             // smaller than specified limit in bytes as data URLs to avoid requests.
+             // A missing `test` is equivalent to a match.
++            {
++              test: /\.elm$/,
++              exclude: [/elm-stuff/, /node_modules/],
++              use: 'elm-webpack-loader'
++            },
+             {
+               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+               loader: require.resolve('url-loader'),

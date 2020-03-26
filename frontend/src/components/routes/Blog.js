@@ -1,6 +1,6 @@
 import React from 'react';
-
-import BlogPostsList from '../../containers/BlogPostsList';
+import Elm from 'react-elm-components';
+import MyElmComponent from '../../Main.elm';
 
 import Overdrive from 'react-overdrive';
 
@@ -11,7 +11,7 @@ const Blog = () => {
         <Overdrive id="main-focus" duration={500}>
           <h1 style={{ marginLeft: '65px' }}>Blog Posts</h1>
         </Overdrive>
-        <BlogPostsList />
+        <Elm src={MyElmComponent.Elm.Main} />
       </div>
     </React.Fragment>
   );
