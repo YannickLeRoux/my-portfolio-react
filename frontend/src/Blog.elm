@@ -13,6 +13,7 @@ import Http
 import Json.Decode as Decode exposing (Decoder, int, string)
 import Json.Decode.Pipeline exposing (optional, required)
 import Post exposing (Post)
+import Spinner
 import Time exposing (Month(..), Weekday(..))
 
 
@@ -26,6 +27,7 @@ port forwardBlogIdToReact : String -> Cmd msg
 type alias Model =
     { state : State
     , posts : List Post
+    , spinner : Spinner.Model
     }
 
 
@@ -37,7 +39,7 @@ type State
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-    ( { state = Loading, posts = [] }
+    ( { state = Loading, posts = [], spinner = Spinner.init }
     , getAllPosts
     )
 
@@ -49,6 +51,7 @@ init _ =
 type Msg
     = GotPosts (Result Http.Error (List Post))
     | ForwardId String
+    | SpinnerMsg Spinner.Msg
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -63,6 +66,15 @@ update msg model =
         ForwardId idStr ->
             ( model, forwardId idStr )
 
+        SpinnerMsg spinnerMsg ->
+            let
+                spinnerModel =
+                    Spinner.update spinnerMsg model.spinner
+            in
+            ( { model | spinner = spinnerModel }
+            , Cmd.none
+            )
+
 
 
 -- VIEW
@@ -72,7 +84,7 @@ view : Model -> Html Msg
 view model =
     case model.state of
         Loading ->
-            viewLoading
+            viewLoading model
 
         Failure ->
             viewFailure
@@ -81,9 +93,12 @@ view model =
             viewSuccess postsList
 
 
-viewLoading : Html msg
-viewLoading =
-    text "Please wait while Heroku server spins up..."
+viewLoading : Model -> Html msg
+viewLoading model =
+    div []
+        [ text "Please wait while Heroku server spins up..."
+        , Spinner.view Spinner.defaultConfig model.spinner
+        ]
 
 
 viewFailure : Html msg
@@ -140,7 +155,7 @@ viewOnePost post =
             [ hr [] []
             , div []
                 [ p [ class "blog-post--excerpt" ] [ text post.subtitle ]
-                , p [ class "text-mute text-right" ] [ text "Read |>" ]
+                , p [ class "text-mute text-right" ] [ text "Read more... |>" ]
 
                 -- , span [] [ arrowRightCircle ]
                 ]
@@ -192,7 +207,7 @@ main =
         { init = init
         , view = view
         , update = update
-        , subscriptions = \_ -> Sub.none
+        , subscriptions = \model -> Sub.map SpinnerMsg Spinner.subscription
         }
 
 

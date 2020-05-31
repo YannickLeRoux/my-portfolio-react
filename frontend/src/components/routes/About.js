@@ -17,8 +17,7 @@ class About extends Component {
             <div className="section-blockquote mt-5 heading-padding">
               <blockquote>
                 <p>
-                  Teaching myself to code daily since May 2017, I enjoy solving real-life problems
-                  with what I learned.
+                  Teaching myself to code daily since May 2017, I enjoy solving real-life problems with what I learned.
                   <br />
                   For example, I started automating time consuming tasks at my current job...
                 </p>
@@ -33,40 +32,31 @@ class About extends Component {
 
           <div className="my-5">
             <div className="text-center">
-              <a href="http://yannick-dev.com/static/files/Resume-v10.pdf">
+              <a href="https://drive.google.com/file/d/1SmcuAdLwEfcLiPgvqFg1lbs3VjWy0q2K/view?usp=sharing">
                 <Button>Download my Resume</Button>
               </a>
             </div>
 
             <br />
             <p className="mt-3">
-              After working for ten years as a <strong>sound engineer</strong> and{' '}
-              <strong>DJ</strong> in the music industry, I felt a desire to{' '}
-              <strong>switch career</strong> early 2017.
-              <br />I remembered that as a kid and then a teenager, I loved to create small scripts
-              on my Atari STE, or even hack into some games. I just didn't know at that time if I
-              had what it would take to, one day, become a <strong>professional developer</strong>.
+              After working for ten years as a <strong>sound engineer</strong> and <strong>DJ</strong> in the music
+              industry, I felt a strong desire to <strong>switch career</strong> in early 2017.
+            </p>
+            <p>
+              I remembered that as a kid and then a teenager, I loved to create small scripts on my Atari STE, or even
+              hack into some games. I just didn't know at that time if I had what it would take to, one day, become a{' '}
+              <strong>professional developer</strong>.
             </p>
 
             <p>
-              Then I discovered the impressive range and quality of online content designed to teach
-              people, like me, how to write code.
-              <br />I decided to ask some informed people for advice and was told to give Python a
-              try.
+              Then I discovered the impressive range and quality of online content designed to teach people like me, how
+              to write code.
+              <br />I decided to ask some informed people for advice and was told to give Python a try.
             </p>
 
             <p>
-              I quickly completed a first course created by MIT,{' '}
-              <em>Introduction to Computer Science and Python</em>, and
-              <a
-                href="https://courses.edx.org/certificates/094c7498fb13491b95ae05ff29ab9117"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {' '}
-                achieved a passing grade.
-              </a>
-              <br />I enjoyed the course so much I became hooked on learning more about coding.
+              At first, I used my newly acquired skills to make my current job easier, writing scripts to organize
+              automatically my music in my hard drive for example.
             </p>
 
             <div className="clock">
@@ -77,75 +67,18 @@ class About extends Component {
               </div>
             </div>
             {/* <h2 className="text-center mb-5">
-              <FontAwesomeIcon icon={faQuoteLeft} /> Time to get my first developer job!{' '}
+              <FontAwesomeIcon icon={faQuoteLeft} /> Just put in the hours and stay focus!{' '}
               <FontAwesomeIcon icon={faQuoteRight} />
             </h2> */}
 
             <p>
-              The first personal projects I undertook were driven by the idea of making my current
-              job (DJ) easier.
-              <a
-                href="https://github.com/YannickLeRoux/mp3_organizer"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {' '}
-                Organizing the music files
-              </a>{' '}
-              in my laptop or{' '}
-              <a
-                href="https://github.com/YannickLeRoux/DMC_Chart_Parser"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                reading through tons of blog articles and charts{' '}
-              </a>
-              to collect good tracks to play could be very boring and repetitive. These things, I
-              felt, could definitely be made easier by a little bit of code.
-              <br />
-              <br />
-              Prior to this, I had been building websites using WordPress for years. But once I knew
-              how to write my own code, I wanted to know how to build a website from scratch.
+              I continued teaching myself for months, switching to Javascript, then learning React as I had a strong
+              desire to publish work on the web.
             </p>
-
             <p>
-              As I was already familiar with HTML and CSS, I got into{' '}
-              <a
-                href="https://www.udemy.com/certificate/UC-5PRSEYVI/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Django
-              </a>{' '}
-              to learn to design a back-end. <br />
-              My first project was to create a{' '}
-              <a
-                href="http://receipts-organizer.herokuapp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                receipts organizer
-              </a>{' '}
-              app, one that could scan receipts and keep them organized in a database. I still have
-              to make some improvements to it (i.e. mobile scanning, design, security, etc...) but
-              anybody can sign up for an account and import documents already scanned.
-            </p>
-
-            <p>
-              I next decided to improve my JavaScript skills and learn React JS, following the{' '}
-              <a
-                href="https://courses.edx.org/certificates/ee19337ad1df495cb24f91648532eac3"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                University of Pennsylvania online course
-              </a>
-              .
-            </p>
-
-            <p>
-              Currently, I continue to dive deeper into programming, improving my knowledge of the{' '}
-              <strong>React</strong> ecosystem, bringing TypeScript to the party...
+              Currently, I keep on setting time aside of work to deepen my programming skills, improving my knowledge of
+              the React ecosystem by bringing TypeScript to the party, or discover new technologies. I discovered I
+              really like strongly typed languages and was happy to be able to migrate the React codebase to TS at work.
             </p>
           </div>
         </Container>
