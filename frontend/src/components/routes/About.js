@@ -51,7 +51,8 @@ class About extends Component {
             <p>
               Then I discovered the impressive range and quality of online content designed to teach people like me, how
               to write code.
-              <br />I decided to ask some informed people for advice and was told to give Python a try.
+              <br />I decided to ask some informed people for advice and was told to give <strong>Python</strong> a
+              try... I loved it!
             </p>
 
             <p>
@@ -72,13 +73,14 @@ class About extends Component {
             </h2> */}
 
             <p>
-              I continued teaching myself for months, switching to Javascript, then learning React as I had a strong
-              desire to publish work on the web.
+              I continued teaching myself for months, switching to <strong>Javascript</strong>, then learning{' '}
+              <strong>React</strong> as I had a strong desire to publish work on the web.
             </p>
             <p>
               Currently, I keep on setting time aside of work to deepen my programming skills, improving my knowledge of
-              the React ecosystem by bringing TypeScript to the party, or discover new technologies. I discovered I
-              really like strongly typed languages and was happy to be able to migrate the React codebase to TS at work.
+              the React ecosystem by bringing <strong>TypeScript</strong> to the party, or discover new technologies. I
+              discovered I really like strongly typed languages and was happy to be able to migrate the React codebase
+              to TS at work.
             </p>
           </div>
         </Container>
