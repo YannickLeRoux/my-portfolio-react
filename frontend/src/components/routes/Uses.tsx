@@ -9,6 +9,7 @@ const Uses = () => {
         <ul>
           <li>TypeScript</li>
           <li>Javascript</li>
+          <li>Elm</li>
         </ul>
         <hr />
         <h3>UI Libraries I use:</h3>

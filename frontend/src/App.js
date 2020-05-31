@@ -20,7 +20,8 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 const App = () => {
   useLayoutEffect(() => {
     myScript();
-  }, [myScript]);
+    // fetch('https://portfolio-blog-api-971.herokuapp.com/posts').then(() => console.log('wake up heroku!'));
+  }, []);
   return (
     <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter>
