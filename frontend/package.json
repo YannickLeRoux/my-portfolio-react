@@ -16,7 +16,7 @@
     "apollo-client": "^2.5.1",
     "apollo-link-context": "^1.0.8",
     "apollo-link-http": "^1.5.14",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.1.1",
     "dotenv": "^6.0.0",
     "font-awesome": "^4.7.0",
