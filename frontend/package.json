@@ -52,7 +52,7 @@
     "redux-promise": "^0.6.0",
     "styled-components": "^5.0.0",
     "typescript": "^3.7.5",
-    "url-parse": "^1.4.3"
+    "url-parse": "^1.5.8"
   },
   "jest": {
     "snapshotSerializers": [
