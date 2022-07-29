@@ -6,7 +6,7 @@ django-imagekit==4.0.2
 django-widget-tweaks==1.4.1
 idna==2.6
 Markdown==2.6.11
-mistune==0.8.3
+mistune==2.0.3
 pilkit==2.0
 Pillow==5.0.0
 psycopg2==2.7.4
